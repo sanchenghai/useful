@@ -1,0 +1,4 @@
+{
+	"name" : "sevendays",
+	"main" : "./day1_require.js"
+}

@@ -3,12 +3,16 @@
 <meta charset="utf-8">
 <title>Zero Clipboard Test</title>
 <script type="text/javascript" src="./js/ZeroClipboard.js"></script>
+</head>
+<body>
+<input type="text" id="frominput">
+<span id="button" style="cursor: pointer;">点击复制</span>
 <script language="JavaScript">
  var clip = null; 
  function $(id) { return document.getElementById(id); } 
  function init() {
-     clip = new ZeroClipboard.Client();
- console.log(clip);
+     clip = new ZeroClipboard.Client($("frominput"));
+     console.log(clip);
      clip.setHandCursor(true);     
      clip.addEventListener('mouseOver', function (client) {
         // update the text on mouse over
@@ -21,11 +25,9 @@
      });
      clip.glue('clip_button', 'clip_container' );
  }
- console.log(clip);
+ $("button").onclick = function(){
+    init();
+ };
 </script>
-</head>
-<body onload="init()">
-<input id="fe_text" cols=50 rows=5 value=复制内容文本1 >
-<span id="clip_container"><span id="clip_button"><b>复制</b></span></span>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 1200px;height:800px;margin:10px auto;"></div>
+    <div id="btn" style="text-align:center;display:none;">
+        <button style="cursor:pointer;" id="btn1">数据明晰</button>
+        <button style="cursor:pointer;" id="btn2">趋势对比</button>
+    </div>
+    <script type="text/javascript" src="myparallel.js" charset="UTF-8"></script>
+    <script>
+        var btn1 =document.getElementById('btn1');
+        var btn2 =document.getElementById('btn2');
+        btn1.onclick = function(){
+            window.location.reload();
+        }
+        btn2.onclick = function(){
+        }
+    </script>
+</body>
+</html>

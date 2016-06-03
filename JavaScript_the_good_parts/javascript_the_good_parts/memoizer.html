@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="renderer" content="webkit">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <h1>带记忆功能的函数构造函数</h1>
+
+    <!-- jQuery -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script>
+
+
+      //竟然是好使的。高端。
+
+
+      var memoizer = function(memo,fundamental){
+        var shell = function(n){
+          var result = memo[n];
+          console.log("add by wq: n = " + n + " result = " + result);
+          if(typeof result !== 'number'){
+            console.log("result ++++= "+result);
+            result = fundamental(shell,n);
+            console.log("result = "+result);
+            console.log("shell = "+shell);
+            memo[n] = result;
+          }
+          return result;
+        };
+        return shell;
+      };
+
+      //这是一个阶乘
+      var factotial = memoizer([1,1],function(shell,n){
+        console.log("wq add: " + n);
+        return n * shell(n-1);
+      });
+      console.log(factotial);
+      console.log("begin");
+      var res = factotial(5);
+      console.log(res);
+
+      //test,失败
+      /*var test = (function (n){
+              var result = memo[n];
+              console.log("add by wq: n = " + n + " result = " + result);
+              if(typeof result !== 'number'){
+                result = fundamental(shell,n);
+                memo[n] = result;
+              }
+              return result;
+            }());
+      console.log("test= " + test);*/
+
+
+      console.log("=====aa=====");
+
+
+      //再来一个fibonacci数列
+      /*var fibonacci = memoizer([0,1],function(shell,n){
+        return shell(n-1) + shell(n-2);
+      });*/
+      var fibonacci = function(){
+        var memo = [0,1];
+        var fib = function(n){
+          var result = memo[n];
+          if(typeof result !== 'number'){
+            result = fib(n-1) + fib(n-2);
+            memo[n] = result;
+          }
+          return result;
+        };
+        return fib;
+      }();
+      console.log(fibonacci);
+      console.log(fibonacci(7));
+    </script>
+  </body>
+</html>

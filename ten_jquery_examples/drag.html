@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>拖动效果</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script src="jquery.js"></script>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#container{
+		width: 2000px;
+		height: 2000px;
+	}
+	#login{
+		width: 100px;
+		height: 50px;
+		position: fixed;
+		left: 400px;
+		top: 200px;
+		background-color: rgb(34,188,241);
+		color: white;
+		font-size: 25px;
+		line-height: 50px;
+		text-align: center;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	#cont{
+		width: 500px;
+		height: 300px;
+		border: 5px solid #abcedf;
+		text-align: center;
+		position: absolute;
+		top: 0px;
+		z-index: 2;
+		display: none;
+		background-color: #eee;
+	}
+	#cont h1{
+		background-color: rgb(93,240,94);
+		color: white;
+		cursor: pointer;
+	}
+	#cont span{
+		display: inline-block;
+		width: 40px;
+		height: 20px;
+		line-height: 20px;
+		position: absolute;
+		top:26px;
+		right: 4px;
+		z-index: 2;
+		font-size: 15px;
+		cursor: pointer;
+	}
+	#cont span:hover{
+		color: red;
+	}
+	#cont form{
+		font-size: 22px;
+		line-height: 20px;
+	}
+	#cont form input{
+		height: 20px;
+	}
+    #mask{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        background-color: black;
+        opacity: 0.5;
+    }
+</style>
+</head>
+    <body>
+    	<div id="container">
+    		<div id="login">登陆</div>
+    		<div id="cont">
+    			<br />
+    			<h1>欢迎您，请输入账号和密码</h1>
+    			<span>关闭</span>
+    			<br />
+    			<br />
+    			<form action="#">
+    				账号：<input type="text" /><br /><br />
+    				密码：<input type="password" /><br />
+    			</form>
+    		</div>
+    	</div>
+    	<script>
+    		$(function(){
+    			var login = $("#login"),
+    				cont = $("#cont"),
+    				close = $("#cont span"),
+    				winwidth = $(window).width(),
+    				winheight = $(window).height(),
+    				contwidth = cont.outerWidth(true),
+    				contheight = cont.outerHeight(true),
+    				scrolltop = $(window).scrollTop(),
+    				scrollleft = $(window).scrollLeft(),
+                    maskwidth = $(document).width(),
+                    maskheight = $(document).height();
+
+    			var posl ;
+    			var post ;
+
+                var mask = "<div id='mask'></div>";
+
+    			login.click(function(){
+                    scrolltop = $(window).scrollTop();
+                    scrollleft = $(window).scrollLeft();
+                    posl = winwidth/2 - contwidth/2 + scrollleft;
+                    post = winheight/2 - contheight/2 + scrolltop;
+    				cont.show().animate({
+    					'left': posl,
+    					'top': post
+    				},500);
+                    $('#container').append(mask);
+                    $('#mask').width(maskwidth).height(maskheight);
+
+                    ($("#cont span,#mask")).bind("click",function(){
+                        cont.hide();
+                        $('#mask').remove();
+                    });
+    			});
+
+    			$(window).resize(function(){
+    				if(cont.is(':visible')){
+    					winwidth = $(window).width();
+    					winheight = $(window).height();
+    					posl = winwidth/2 - contwidth/2 + scrollleft;
+    					post = winheight/2 - contheight/2 + scrolltop;
+    					cont.animate({
+    						'left': posl,
+    						'top': post
+    					},500).dequeue();
+    				}    				
+    			});
+
+    			$(window).scroll(function(){
+    				if(cont.is(':visible')){
+    					scrolltop = $(window).scrollTop();
+    					scrollleft = $(window).scrollLeft();
+    					posl = winwidth/2 - contwidth/2 + scrollleft;
+    					post = winheight/2 - contheight/2 + scrolltop;
+    					cont.animate({
+    						'left': posl,
+    						'top': post
+    					},500).dequeue();
+    				}    				
+    			});
+
+
+    			$("#cont h1").mousedown(function(e){
+    				var h1p = $('#cont').offset();
+                    var h2p = $('#container').offset();
+    				var disx = e.pageX - h1p.left +h2p.left;
+    				var disy = e.pageY - h1p.top +h2p.top;
+
+    				// console.log(h1p);
+    				// console.log(e.pageX,e.pageY);
+    				// console.log(disx,disy);
+
+    				$(document).mousemove(function(e){
+    					var x = e.pageX - disx,
+    						y = e.pageY - disy;
+    					// console.log(e.pageX,e.pageY);
+    					// console.log(x,"   ",y);
+    					if(x<0){
+							x=0;
+							//console.log('x0');
+						}else if(x>$('#container').width()-$('#cont').outerWidth(true)){
+							x = $('#container').width()-$('#cont').outerWidth(true);
+							//console.log('x1');
+						}
+
+						if(y<0){
+							y = 0;
+							//console.log('y0');
+						}else if(y>$('#container').height()-$("#cont").outerHeight(true)){
+                            // console.log(y);
+							y = $('#container').height()-$("#cont").outerHeight(true);
+                            //console.log($('#container').width());
+                            //console.log($("#cont").outerWidth(true));
+							// console.log(y);
+						}
+						//console.log(x,"   ",y);
+						cont.css({
+							'left':x,
+							'top':y
+						});
+						
+    				});
+
+    				$(document).mouseup(function(){
+    					$(document).off('mousemove');
+    					$(document).off('mouseup');
+    				});
+
+    			});
+
+
+    		});    		
+    		
+    	</script>
+    </body>
+</html>

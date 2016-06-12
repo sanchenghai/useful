@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>放大镜效果</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script src="jquery.js"></script>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	li{
+		list-style-type: none;
+	}
+	#container{
+		margin: 0px auto;
+		position: relative;
+	}
+	#container h1{
+		text-align: center;
+		color: #abcdef;
+		margin: 10px;
+	}
+	#middle{
+		width: 300px;
+		height: 300px;
+		margin: 0px auto;
+		border: 3px solid #ccc;
+		position: relative;
+	}
+	#middle img{
+		width: 300px;
+		height: 300px;
+	}
+	#mask{
+		width: 100px;
+		height: 100px;
+		background-color: rgba(0,0,0,0.5);
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		display: none;
+	}
+	#small{
+		width: 306px;
+		height: 60px;
+		margin: 2px auto;		
+	}
+	#left{
+		float: left;
+		height: 62px;
+		width: 17px;
+		background-color: #ccc;
+		color: black;
+		text-align: center;
+		line-height: 62px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	#simg{
+		width: 272px;
+		height: 62px;
+		float: left;
+		position: relative;
+		overflow: hidden;
+	}
+	#simg ul{
+		width: 500px;
+		height: 60px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+	#simg ul li{
+		width: 60px;
+		height: 60px;
+		border: 1px solid #ccc;
+		margin: 0px 3px;
+		float: left;
+		_display: inline;
+		cursor: pointer;
+	}
+	#simg ul li.current{
+		border: 1px solid orange;
+	}
+	#simg ul li img{
+		width: 60px;
+		height: 60px;
+	}
+	#right{
+		float: right;
+		height: 62px;
+		width: 17px;
+		background-color: #ccc;
+		color: black;
+		text-align: center;
+		line-height: 62px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	#big{
+		width: 350px;
+		height: 350px;
+		border: 3px solid #ccc;
+		position: absolute;
+		top: 50px;
+		right: 100px;
+		overflow: hidden;
+		display: none;
+	}
+	#big img{
+		width: 600px;
+		height: 600px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+</style>
+</head>
+    <body>
+    	<div id="container">
+    		<h1>王氏商城</h1>
+    		<div id="middle">
+    			<img src="z1.jpg" alt="" />
+    			<div id="mask"></div>
+    		</div>
+    		<div id="small">
+    			<span id="left">&lt;</span>
+    			<div id="simg">
+    				<ul>
+    					<li class="current"><img src="z1.jpg" alt="" /></li>
+    					<li><img src="z2.jpg" alt="" /></li>
+    					<li><img src="z3.jpg" alt="" /></li>
+    					<li><img src="z4.jpg" alt="" /></li>
+    					<li><img src="z5.jpg" alt="" /></li>
+    					<li><img src="z6.jpg" alt="" /></li>
+    				</ul>
+    			</div>
+    			<span id="right">&gt;</span>
+    		</div>
+    		<div id="big"><img src="z1.jpg" alt="" /></div>
+    		<script>
+    			$(function(){
+    				var middleimg = $('#middle img'),
+    					middle = $('#middle'),
+    					mask = $('#mask'),
+    					leftspan = $("#left"),
+    					rightspan = $("#right"),
+    					simgli = $("#simg ul li"),
+    					smallimglength = simgli.size(),
+    					simgul = $("#simg ul"),
+    					simgliwidth = simgli.outerWidth(true),
+    					big = $('#big'),
+    					bigimg = $('#big img'),
+    					now = 0;
+
+    				simgli.mouseover(function(){
+    					$(this).addClass('current').siblings().removeClass('current');
+    					var thissrc = $(this).children('img').attr('src');
+    					middleimg.attr('src',thissrc);
+    					bigimg.attr('src',thissrc);
+    				});
+
+    				leftspan.click(function(){
+    					if(now<=0){
+    						now = 0;
+    					}else{
+    						now--;
+    						simgul.animate({
+    							'left':'+='+simgliwidth},
+    							500);
+    					}
+    				});
+
+    				rightspan.click(function(){
+    					if(now>=smallimglength - 4){
+    						now = smallimglength - 4;
+    					}else{
+    						now++;
+    						simgul.animate({
+    							'left':-now*simgliwidth},
+    							500);
+    					}
+    				});
+
+    				middle.mousemove(function(e){
+    					mask.show();
+    					big.show();
+    					var maskwidth = mask.width(),
+    						maskheight = mask.height(),
+    						maskoffset = middle.offset(),
+    						x = e.pageX - maskoffset.left - maskwidth/2,
+    						y = e.pageY - maskoffset.top - maskheight/2;
+
+    					if(x<=0){
+    						x = 0;
+    					}else if(x>=middle.width()-maskwidth){
+    						x = middle.width()-maskwidth;
+    					}
+
+    					if(y<=0){
+    						y = 0;
+    					}else if(y>=middle.height()-maskheight){
+    						y = middle.height()-maskheight;
+    					}
+
+    					mask.css({
+    						'left':x,
+    						'top':y
+    					});
+
+    					var percentx = x/(middle.width()-maskwidth),
+    						percenty = y/(middle.width()-maskwidth);
+
+    					bigimg.css({
+    						'left':-percentx*(600-big.width()),
+    						'top':-percenty*(600-big.height())
+    					});
+
+    				});
+
+    				middle.mouseout(function(){
+    					mask.hide();
+    					big.hide();
+    				});
+
+    			});
+    		</script>
+    	</div>
+    </body>
+</html>

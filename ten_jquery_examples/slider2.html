@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>单张图片无缝滚动</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script src="jquery.js"></script>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#container{
+		width: 500px;
+		height: 350px;
+		position: relative;
+		border: 5px solid #abcdef;
+		margin: 100px auto;
+	}
+	#wrap{
+		width: 500px;
+		height: 350px;
+		overflow: hidden;
+	}
+	#container ul{
+		width: 150px;
+		height: 20px;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+	}
+	#container ul li{
+		list-style: none;
+		float: right;
+		border:1px solid yellow;
+		font-size: 15px;
+		line-height: 15px;
+		margin: 2px;
+		padding: 2px 4px;
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
+	#container .current{
+		background-color: red;
+	}
+</style>
+</head>
+    <body>
+    	<div id="container">
+    		<div id="wrap">
+    			<img src="s21.jpg" alt="傅家俊" />
+    			<img src="s22.jpg" alt="Stephen Maguire" />
+    			<img src="s23.jpg" alt="Mark Selby" />
+    			<img src="s24.jpg" alt="丁俊晖" />
+    			<img src="s25.jpg" alt="猜猜这个高富帅是who" />
+    		</div>
+    		<ul>
+    			<li>5</li>
+    			<li>4</li>
+    			<li>3</li>
+    			<li>2</li>
+    			<li class="current">1</li>
+    		</ul>
+    	</div>
+    	<script>
+    		var wrap = $("#wrap");
+    		var pic = $("#wrap img");
+    		var size = pic.size();
+    		var index = 0;
+    		var li = $("ul li");
+    		var timer = null;
+
+    		function begin(){
+    			index++;
+    			if(index>4){
+    				index=0;
+    			}    				
+    			slider(index);
+    		};
+
+    		function slider(index){
+    			pic.eq(index).show().siblings().hide();
+    			li.eq(4-index).addClass("current").siblings().removeClass("current");
+    		};
+
+    		timer = setInterval(begin,1500);
+
+    		$("#container").mouseover(function(){
+    			clearInterval(timer);
+    		});
+
+    		$("#container").mouseout(function(){
+    			timer = setInterval(begin,1500);
+    		});
+
+    		li.mouseover(function(){
+    			var tindex = 4-$(this).index();
+    			slider(tindex);
+    		});
+
+    	</script>
+    </body>
+</html>

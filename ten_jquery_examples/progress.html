@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>进度条</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script src="jquery.js"></script>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#outer{
+		width: 500px;
+		height: 30px;
+		background-color: white;
+		margin: 10px 30px;
+		border: 3px solid #abcdef;
+	}
+	#inner{
+		background-color: #abcdef;
+		height: 30px;
+		width: 0px;
+	}
+	#click{
+		width: 100px;
+		height: 30px;
+		background-color: rgb(8,46,148);
+		color: white;
+		margin: 0px 30px;
+		text-align: center;
+		line-height: 30px;
+		font-weight: bold;
+		font-size: 25px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+</style>
+</head>
+    <body>
+    	<div id="outer">
+    		<div id="inner"></div>
+    	</div>
+    	<div id="click">上传</div>
+    </body>
+    <script>
+    	$(function(){
+    		var outer = $("#outer"),
+    			inner = $("#inner"),
+    			click = $("#click");
+    		var timer = null;
+    		var per = 0;
+
+    		$("#click").click(function(){
+    			timer = setInterval(function(){
+    				per +=2;
+    				if(per==100){
+    					clearInterval(timer);
+    				}
+    				inner.width(per/100*outer.width());
+    				click.text(per+"%");
+    			},50);
+    		});
+    	});
+    </script>
+</html>

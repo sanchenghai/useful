@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>tab标签</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<style>
+	div{
+		width: 400px;
+		border-collapse: collapse;
+	}
+	#container{
+		margin: 50px auto;
+	}
+	ul,li{
+		list-style-type: none;
+		display: inline-block;
+		margin: 0px;
+		padding: 0px;
+	}
+	ul{
+		height: 30px;
+		margin: 5px 0px 5px 16px;
+	}
+	li{
+		border: 1px solid #38a;
+		height: 30px;
+		line-height: 30px;
+		font-size: 20px;
+		padding: 0px 30px;
+		cursor: pointer;
+	}
+	#container div{
+		height: 250px;
+		border: 1px solid #38a38a;
+	}
+	.hidden{
+		display: none;
+	}
+	.current{
+		background-color: #833;
+	}
+</style>
+<script src="jquery.js"></script>
+</head>
+    <body>
+    	<div id="container">
+    		<ul>
+    			<li class="current">xhtml</li>
+    			<li>css</li>
+    			<li>jquery</li>
+    		</ul>
+    		<div>
+    			<div>xhtml</div>
+    			<div class="hidden">css</div>
+    			<div class="hidden">jquery</div>
+    		</div>    		
+    	</div>
+    	<script>
+    		var div = $("#container div div");
+    		var li = $("#container ul li");
+    		li.click(function(){
+    			var _this = $(this);
+    			_this.addClass("current").siblings().removeClass("current");
+    			var index = _this.index();
+    			div.eq(index).show().siblings().hide();
+    		});
+    	</script>
+    </body>
+</html>

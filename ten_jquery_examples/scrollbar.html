@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>自定义滚动条</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script src="jquery.js"></script>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	#xdir{
+		width: 1000px;
+		height: 25px;
+		background-color: #abcdef;
+		margin: 50px;
+		position: relative;
+	}
+	#xdir div{
+		width: 25px;
+		height: 25px;
+		background-color: red;
+		cursor: pointer;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+	#dir{
+		background-color: blue;
+		margin: 50px;
+	}
+</style>
+</head>
+    <body>
+    	<div id="container">
+    		<div id="xdir">
+    			<div></div>
+    		</div>
+    		<div id="dir"></div>
+    		<div></div>
+    		<div></div>
+    	</div>
+    	<script>
+    		$(function(){
+    			var container = $('#container'),
+    				xdir = $('#xdir'),
+    				xsrc = $('#xdir div'),
+    				posx;
+
+    				xsrc.mousedown(function(e){
+    					var divpos = xsrc.offset();
+    					var marpos = xdir.offset();
+    					posx = e.pageX - divpos.left + marpos.left;
+
+    					$(document).mousemove(function(e){
+    						var x = e.pageX - posx;
+
+    						if(x<0){
+    							x = 0;
+    						}else if(x>xdir.width()-xsrc.outerWidth(true)){
+    							x = xdir.width()-xsrc.outerWidth(true);
+    						}
+
+    						xsrc.css({
+    							'left':x
+    						});
+
+    						var per = x/(xdir.width()-xsrc.outerWidth(true));
+
+    						$('#dir').css({
+    							'width':per*1000,
+    							'height':per*400
+    						});
+
+    					});
+
+    					$(document).mouseup(function(){
+    						$(document).off('mousemove');
+    						$(document).off('mouseup');
+    					});
+    				});
+    		});
+    	</script>
+    </body>
+</html>

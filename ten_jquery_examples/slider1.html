@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>多张图片轮播</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script src="jquery.js"></script>
+<style>
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	#container{
+		margin: 100px auto;
+	}
+	#container p{
+		margin: 0px 0px 20px 250px;
+	}
+	#container p a{
+		font-size: 30px;
+		text-decoration: none;
+		line-height: 30px;
+		margin: 40px;
+	}
+	#wrap{
+		width: 800px;
+		height: 200px;
+		border:5px solid red;
+		margin: 0px auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#wrap ul{
+		width: 2000px;
+		height: 200px;
+		position: absolute;
+		top:0px;
+		left: 0px;
+        _height:1px;
+	}
+	#wrap ul li{
+		list-style: none;
+		float: left;
+        width: 200px;
+	}
+    #clr{
+        clear: both;
+    }
+</style>
+</head>
+    <body>
+    	<div id="container">
+    		<p>
+    			<a href="javascript:left();">left</a>
+    			<a href="javascript:right();">right</a>
+    		</p>
+    		<div id="wrap">
+    			<ul>
+    				<li><img src="s11.jpg" alt="" /></li>
+    				<li><img src="s12.jpg" alt="" /></li>
+    				<li><img src="s13.jpg" alt="" /></li>
+    				<li><img src="s14.jpg" alt="" /></li>
+    				<li><img src="s15.jpg" alt="" /></li>
+    			</ul>
+                <div id="clr"></div>
+    		</div>    		
+    	</div>
+    	<script>
+    		var sul = $("#wrap ul");
+    		var insul = sul.html();
+    		sul.html(insul + insul);
+
+    		var sli = $("#wrap ul li");
+    		var ssli = sli.size();
+    		var wsli = sli.eq(0).width();
+    		var l = ssli*wsli;
+    		sul.width(l);
+
+    		var speed = -2;
+
+    		function slider(){
+    			if(speed<0){
+    				if(sul.css("left")== -l/2 + "px"){
+    					sul.css("left",0);
+    				}
+    				sul.css("left","+="+speed+"px");
+    			}
+    			if(speed>0){
+    				if(sul.css("left")== "0px"){
+    					sul.css("left",-l/2 + "px");
+    				}
+    				sul.css("left","+="+speed+"px");
+    			}
+    		}
+
+    		var timer = setInterval(slider,30);
+
+    		sul.mouseover(function(){
+    			clearInterval(timer);
+    		});
+
+    		sul.mouseout(function(){
+    			timer = setInterval(slider,30);
+    		});
+
+    		function left(){
+    			speed = -2;
+    		}
+
+    		function right(){
+    			speed = 2;
+    		}
+
+    	</script>
+    </body>
+</html>

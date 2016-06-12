@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>瀑布流</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<script src="jquery.js"></script>
+<style>
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+	#container{
+		position: relative;
+		width: 1200px;
+		margin: 0px auto;
+	}
+	#container .box{
+		border: 3px solid #ccc;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+	#container .box img{
+		width: 250px;
+		margin: 10px 6px 0px 6px;
+	}
+	#container .box p{
+		text-align: center;
+		color: rgb(8,48,93);
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: bold;
+	}
+</style>
+</head>
+    <body>
+    	<div id="container">
+    		<div class="box">
+    			<img src="1.jpg" alt="" />
+    			<p>燃不尽的烟火</p>
+    		</div>
+    		<div class="box">
+    			<img src="2.jpg" alt="" />
+    			<p>绿意盎然</p>
+    		</div>
+    		<div class="box">
+    			<img src="3.jpg" alt="" />
+    			<p>另一个世界</p>
+    		</div>
+    		<div class="box">
+    			<img src="4.jpg" alt="" />
+    			<p>玉龙舞天</p>
+    		</div>
+    		<div class="box">
+    			<img src="7.jpg" alt="" />
+    			<p>Reglna</p>
+    		</div>
+    		<div class="box">
+    			<img src="6.jpg" alt="" />
+    			<p>watchman</p>
+    		</div>
+    		<div class="box">
+    			<img src="5.jpg" alt="" />
+    			<p>深蓝</p>
+    		</div>
+    		<div class="box">
+    			<img src="8.jpg" alt="" />
+    			<p>逆流</p>
+    		</div>
+    		<div class="box">
+    			<img src="9.jpg" alt="" />
+    			<p>火一样的青春</p>
+    		</div>
+    		<div class="box">
+    			<img src="z1.jpg" alt="" />
+    			<p>小米1</p>
+    		</div>
+    		<div class="box">
+    			<img src="z2.jpg" alt="" />
+    			<p>米沃，随你选</p>
+    		</div>
+    		<div class="box">
+    			<img src="z3.jpg" alt="" />
+    			<p>小米配送，安全到家</p>
+    		</div>
+    		<div class="box">
+    			<img src="z4.jpg" alt="" />
+    			<p>春色满园</p>
+    		</div>
+    		<div class="box">
+    			<img src="z5.jpg" alt="" />
+    			<p>彩绘个性任我行</p>
+    		</div>
+    		<div class="box">
+    			<img src="z6.jpg" alt="" />
+    			<p>米竹</p>
+    		</div>
+    		<div class="box">
+    			<img src="s11.jpg" alt="" />
+    			<p>咪一</p>
+    		</div>
+    		<div class="box">
+    			<img src="s12.jpg" alt="" />
+    			<p>咪二</p>
+    		</div>
+    		<div class="box">
+    			<img src="s13.jpg" alt="" />
+    			<p>咪三</p>
+    		</div>
+    		<div class="box">
+    			<img src="s14.jpg" alt="" />
+    			<p>咪四</p>
+    		</div>
+    		<div class="box">
+    			<img src="s15.jpg" alt="" />
+    			<p>汪星乱入</p>
+    		</div>
+    		<div class="box">
+    			<img src="s21.jpg" alt="" />
+    			<p>张家俊</p>
+    		</div>
+    		<div class="box">
+    			<img src="s22.jpg" alt="" />
+    			<p>Mike</p>
+    		</div>
+    		<div class="box">
+    			<img src="s23.jpg" alt="" />
+    			<p>Michel</p>
+    		</div>
+    		<div class="box">
+    			<img src="s24.jpg" alt="" />
+    			<p>丁俊晖</p>
+    		</div>
+    		<div class="box">
+    			<img src="s25.jpg" alt="" />
+    			<p>高富帅</p>
+    		</div>
+    	</div>
+    	<script>
+    		$(function(){
+    			$('img').load(function(){
+    				var box = $('#container .box'),
+    					boxheight = {
+    						leftbh:[],
+    						leftbh2:[],
+    						rightbh2:[],
+    						rightbh:[]
+    					};
+
+    				for(var i=0;i<box.length;i++){
+    					var now = i%4;
+
+    					switch(now){
+    						case 0: box.eq(i).css('left','20px');
+    								boxheight.leftbh.push(box.eq(i).outerHeight(true));
+
+    								var thish = Math.floor(i/4);
+    								if(thish==0){
+    									box.eq(i).css('top','10px');
+    								}else{
+    									var total = 0;
+    									for(var j=0;j<thish;j++){
+    										total += boxheight.leftbh[j] + 20;
+    									}
+    									box.eq(i).css('top',total);
+    								}
+    								break;
+    						case 1: box.eq(i).css('left','320px');
+    								boxheight.leftbh2.push(box.eq(i).height());
+
+    								var thish = Math.floor(i/4);
+    								if(thish==0){
+    									box.eq(i).css('top','10px');
+    								}else{
+    									var total = 0;
+    									for(var j=0;j<thish;j++){
+    										total += boxheight.leftbh2[j] + 20;
+    									}
+    									box.eq(i).css('top',total);
+    								}
+    								break;
+    						case 2: box.eq(i).css('left','616px');
+    								boxheight.rightbh2.push(box.eq(i).height());
+
+    								var thish = Math.floor(i/4);
+    								if(thish==0){
+    									box.eq(i).css('top','10px');
+    								}else{
+    									var total = 0;
+    									for(var j=0;j<thish;j++){
+    										total += boxheight.rightbh2[j] + 20;
+    									}
+    									box.eq(i).css('top',total);
+    								}
+    								break;
+    						case 3: box.eq(i).css('left','914px');
+    								boxheight.rightbh.push(box.eq(i).height());
+
+    								var thish = Math.floor(i/4);
+    								if(thish==0){
+    									box.eq(i).css('top','10px');
+    								}else{
+    									var total = 0;
+    									for(var j=0;j<thish;j++){
+    										total += boxheight.rightbh[j] + 20;
+    									}
+    									box.eq(i).css('top',total);
+    								}
+    								break;	
+    					}
+    				}
+    			});    			
+    		});
+    	</script>
+    </body>
+</html>

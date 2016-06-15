@@ -26,8 +26,8 @@ outerwidth	返回窗口的外部宽度。
 只读属性，声明了整个窗口的高度和宽度。
 IE 不支持此属性，且没有提供替代的属性。
 ***/
-var w = window.outerwidth;
-var h = window.outerheight;
+var w = window.outerWidth;
+var h = window.outerHeight;
 console.log("浏览器窗口的宽度：" + w + "，高度：" + h);
 
 
@@ -68,3 +68,7 @@ element.offsetWidth	返回元素的宽度。
 element.scrollHeight	返回元素的整体高度。
 element.scrollWidth	返回元素的整体宽度。
 ***/
+var ele = document.getElementById("wrapper");
+console.log("窗口的宽度：" + ele.clientWidth + "，高度：" + ele.clientHeight);
+console.log("窗口的宽度：" + ele.offsetWidth + "，高度：" + ele.offsetHeight);
+console.log("窗口的宽度：" + ele.scrollWidth + "，高度：" + ele.scrollHeight);

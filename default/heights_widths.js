@@ -61,12 +61,15 @@ console.log("窗口的宽度：" + w + "，高度：" + h);
 /***
 element.clientHeight	返回元素的可见高度。
 element.clientWidth	返回元素的可见宽度。
+个人测试：不包括margin和border
 
 element.offsetHeight	返回元素的高度。
 element.offsetWidth	返回元素的宽度。
+个人测试：不包括margin
 
 element.scrollHeight	返回元素的整体高度。
 element.scrollWidth	返回元素的整体宽度。
+个人测试：不包括margin和border
 ***/
 var ele = document.getElementById("wrapper");
 console.log("窗口的宽度：" + ele.clientWidth + "，高度：" + ele.clientHeight);

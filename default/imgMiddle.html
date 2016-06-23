@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>新建网页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		width: 400px;
+		height: 400px;
+		margin: 10px auto;
+		border: 4px solid black;
+		background-color: gray;
+	}
+	p{
+		height: 400px;
+		line-height: 400px;
+		text-align: center;
+	}
+	/*标准浏览器兼容*/
+	p:before{
+		content:"";
+		margin-left: -5px;
+		font-size: 10px;
+		visibility: hidden;
+	}
+	img{
+		max-width: 380px;
+		max-height: 380px;
+		vertical-align: middle;
+		/*IE低版本兼容*/
+		*margin-top: expression((400 - this.height) / 2);
+	}
+</style>
+</head>
+    <body>
+    	<!-- 图片垂直居中 CSS方式 兼容IE低版本时相当于用了JS -->
+    	<div><p><img src="http://www.baidu.com/img/baidu_jgylogo3.gif" alt="" /></p></div>
+    	<div><p><img src="http://www.baidu.com/img/bd_logo1.png" alt="" /></p></div>
+    	<!-- Chrome FireFox 360 IE 测试通过 -->
+    </body>
+</html>

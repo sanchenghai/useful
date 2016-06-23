@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>新建网页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="布尔教育 http://www.itbool.com" />
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		width: 400px;
+		height: 400px;
+		margin: 10px auto;
+		border: 4px solid black;
+		background-color: gray;
+		position: relative;
+	}
+	p{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+	}
+	img{
+		max-width: 380px;
+		max-height: 380px;
+	}
+</style>
+</head>
+    <body>
+    	<!-- 图片垂直居中 JS方式 -->
+    	<div><p><img src="http://www.baidu.com/img/baidu_jgylogo3.gif" alt="" /></p></div>
+    	<div><p><img src="http://www.baidu.com/img/bd_logo1.png" alt="" /></p></div>
+    	<script>
+    	window.onload = function(){
+    		var img = document.getElementsByTagName('img');
+    		var i;
+    		for(i = 0; i < img.length; i += 1){
+    			console.log(img[i]);
+    			console.log("clientHeight"+img[i].clientHeight+",clientWidth"+img[i].clientWidth);
+    			console.log("offsetHeight"+img[i].offsetHeight+",offsetWidth"+img[i].offsetWidth);
+    			console.log("scrollHeight"+img[i].scrollHeight+",scrollWidth"+img[i].scrollWidth);
+    			img[i].style.marginTop = "-" + img[i].scrollHeight/2 + "px";
+    			img[i].style.marginLeft = "-" + img[i].scrollWidth/2 + "px";
+    		}
+    	}
+    	</script>
+    	<!-- Chrome FireFox 360 IE 测试通过 -->
+    </body>
+</html>

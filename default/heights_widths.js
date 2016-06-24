@@ -15,7 +15,7 @@ var w = window.innerWidth ||
 var h = window.innerHeight ||
         document.documentElement.clientHeight ||
         document.body.clientHeight;
-console.log("浏览器内部窗口的宽度：" + w + "，高度：" + h);
+console.log("浏览器文档显示区的宽度：" + w + "，高度：" + h);
 
 
 
@@ -28,7 +28,7 @@ IE 不支持此属性，且没有提供替代的属性。
 ***/
 var w = window.outerWidth;
 var h = window.outerHeight;
-console.log("浏览器窗口的宽度：" + w + "，高度：" + h);
+console.log("浏览器的宽度：" + w + "，高度：" + h);
 
 
 
@@ -42,7 +42,7 @@ availWidth	返回显示屏幕的宽度 (除 Windows 任务栏之外)。
 ***/
 var w = screen.availWidth;
 var h = screen.availHeight;
-console.log("窗口的宽度：" + w + "，高度：" + h);
+console.log("屏幕文档显示区的宽度：" + w + "，高度：" + h);
 
 
 
@@ -54,7 +54,7 @@ width	返回显示器屏幕的宽度。
 ***/
 var w = screen.width;
 var h = screen.height;
-console.log("窗口的宽度：" + w + "，高度：" + h);
+console.log("屏幕的宽度：" + w + "，高度：" + h);
 
 
 
@@ -72,6 +72,6 @@ element.scrollWidth	返回元素的整体宽度。
 个人测试：不包括margin和border
 ***/
 var ele = document.getElementById("wrapper");
-console.log("窗口的宽度：" + ele.clientWidth + "，高度：" + ele.clientHeight);
-console.log("窗口的宽度：" + ele.offsetWidth + "，高度：" + ele.offsetHeight);
-console.log("窗口的宽度：" + ele.scrollWidth + "，高度：" + ele.scrollHeight);
+console.log("节点元素的宽度：" + ele.clientWidth + "，高度：" + ele.clientHeight);
+console.log("节点元素的宽度：" + ele.offsetWidth + "，高度：" + ele.offsetHeight);
+console.log("节点元素的宽度：" + ele.scrollWidth + "，高度：" + ele.scrollHeight);

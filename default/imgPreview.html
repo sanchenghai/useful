@@ -22,6 +22,8 @@
  	var prevDiv = document.getElementById('preview');
  	if (file.files && file.files[0]) {
  		console.log(file.files);
+ 		//注意下面的console，可用作img的src，来自十八哥Ajax
+ 		console.log(window.URL.createObjectURL(file.files[0]));
  		var reader = new FileReader();
  		reader.onload = function(evt){
  			console.log(evt);

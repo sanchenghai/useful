@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="renderer" content="webkit">
+    <title>Bootstrap 101 Template</title>
+    <style>
+      #china{
+        width: 600px;
+        height: 600px;
+        border: 1px solid black;
+        margin: 100px;
+      }
+      #beijing{
+        width: 400;
+        height: 400;
+        border: 1px solid black;
+        margin: 100px;
+      }
+      #haidian{
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="china">
+      china
+      <div id="beijing">
+        beijing
+        <div id="haidian">
+          haidian
+        </div>
+      </div>
+    </div>
+    <script>
+      function $(id){
+        return document.getElementById(id);
+      }
+      $("china").addEventListener("click",function(){
+        alert("in china 1");
+      },true);
+      $("beijing").addEventListener("click",function(){
+        alert("in beijing 1");
+      },true);
+      $("haidian").addEventListener("click",function(){
+        alert("in haidian 1");
+      },true);
+
+      $("china").addEventListener("click",function(){
+        alert("leave china");
+      },false);
+      $("beijing").addEventListener("click",function(){
+        alert("leave beijing");
+      },false);
+      $("haidian").addEventListener("click",function(){
+        alert("leave haidian");
+      },false);
+
+      $("china").addEventListener("click",function(){
+        alert("in china 2");
+      },true);
+      $("beijing").addEventListener("click",function(){
+        alert("in beijing 2");
+      },true);
+      $("haidian").addEventListener("click",function(){
+        alert("in haidian 2");
+      },true);
+
+      //执行顺序是：从外部进入的先执行（捕捉），然后点击的本体
+      //按照写的先后顺序执行，最后执行外部的冒泡
+      
+    </script>
+  </body>
+</html>

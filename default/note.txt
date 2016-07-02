@@ -1,0 +1,29 @@
+<!-- HTML 注释 -->
+
+// JavaScript 注释
+
+/*
+ *   JavaScript 多行注释
+ */
+
+/* CSS 注释 */
+
+// Java 注释
+
+/**
+ * Java 多行注释
+ */
+
+// php 单行注释
+
+# php 单行注释
+
+/**
+ * php多行注释
+ */
+
+# Python 单行注释
+
+''' 
+Python 多行注释
+'''

@@ -1,7 +1,8 @@
 /***
-js基本类型：Number String Boolean Object Undefined Function
+js基本类型：number string boolean object undefined function
 
-Function是一种特殊的Object
+function是一种特殊的object，就是说函数也是对象，是由Function构造的。
+Function跟Object本身也是函数对象。
 
 显示(Chrome)：
 对象：属性、方法、__proto__
@@ -40,9 +41,9 @@ Programmer.prototype.__proto__ = Person.prototype;
 p.__proto__.__proto__ = Person.prototype
 
 
-结论: p是new Programmer()对象
-      p.__proto__是new Person()对象
-      p.__proto__.__proto__是Person空对象
+结论: p是new Programmer()对象                        可以查找Programmer的this
+      p.__proto__是new Person()对象                  可以查找Programmer的prototype、Person的this
+      p.__proto__.__proto__是Person空对象            可以查找Person的prototype
 
       new使得__proto__和prototype混合了
 ***/

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="自制前端模版" />
+    <meta name="author" contect="wq, king_wangqin@163.com" />
+    <title>Function、Object、Prototype、__proto__内存关系图</title>
+
+    <!-- Bootstrap -->
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<h1>function Animal(){}</h1>
+    <h1>var  anim = new Animal();</h1>
+
+  	<br /><br /><br />
+
+    <h1>Function、Object、Prototype、__proto__内存关系图</h1>
+    <img src="./inMemory.png" alt="" />
+    <h3>Function.prototype 函数对象图内部表示 prototype 属性的红色虚框，只是为了说明这个属性不存在。</h3>
+    <h2>通过上图Function、Object、Prototype关系图中，可以得出一下几点：</h2>
+    <ol>
+    	<li>所有对象，包括函数对象的原型链最终都指向了Object.prototype，而Object.prototype.__proto__===null，原型链至此结束。</li>
+    	<li>Object是一个函数对象，也是Function构造的，Object.prototype是一个普通对象，一般是个空对象。</li>
+    	<li>Object.prototype.__proto__指向null。</li>
+    	<li>Function.prototype是一个函数对象，前面说函数对象都有一个显示的prototype属性，但是Function.prototype却没有prototype属性，即Function.prototype.prototype===undefined，所以Function.prototype函数对象是一个特例，没有prototype属性。</li>
+    	<li>Object虽是Function构造的一个函数对象，但是Object.prototype没有指向Function.prototype，即Object.prototype!==Function.prototype。</li>
+    </ol>
+
+    <br /><br /><br />
+
+    <h1> prototype、constructor内存关系图(在Function、Object、Prototype关系图上加入constructor元素)：</h1>
+    <img src="./inMemory2.png" alt="" />
+    <h3>上图中，红色箭头表示函数对象的原型的constructor所指向的对象。</h3>
+    <h3>注意Object.constructor===Function；本身Object就是Function函数构造出来的</h3>
+    <h3>如何查找一个对象的constructor，就是在该对象的原型链上寻找碰到的第一个constructor属性所指向的对象。</h3>
+
+    <!-- jQuery -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script> 
+      !window.jQuery && document.write('<script src="jquery-3.0.0.min.js"><\/script>');
+    </script> 
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>

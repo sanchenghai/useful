@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="自制前端模版" />
+    <meta name="author" contect="wq, king_wangqin@163.com" />
+    <title>CSS3时钟式进度条</title>
+
+    <!-- Bootstrap -->
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    #cricle{width:200px;height:200px;border:1px solid white;border-radius:50%;position:relative;background:white;overflow:hidden;}
+    #cricle .left,#cricle .right,#cricle .text{width:200px;height:200px}
+    #cricle .text{position:absolute;top:0;left:0;z-index:61;color:#fff;font:26px/200px 'arial';text-align:center;}
+    #cricle .mask{z-index:40}
+    #cricle .mask,#cricle .bg{width:100px;height:200px;background:white;position:absolute;top:0}
+    #cricle .bg{background-color: blue;}
+    #cricle .mask,#cricle .left .bg{left:0}
+    #cricle .right{display:none}
+    #cricle .right .bg{background-position:right top;right:0}
+    #wqone{
+    	width: 200px;
+    	height: 200px;
+    	border: 1px solid black;
+    	border-radius: 100px;
+    	position: absolute;
+    	left: 9px;
+    	top: 9px;
+    	z-index: 50;
+    }
+    #wqtwo{
+    	width: 180px;
+    	height: 180px;
+    	background-color: white;
+    	border: 1px solid black;
+    	border-radius: 50%;
+    	position: absolute;
+    	left: 20px;
+    	top: 20px;
+    	z-index: 51;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wqone"></div>
+    <div id="wqtwo"></div>
+    <div id="cricle">
+    	<div class="mask"></div>
+    	<div class="left">
+    		<div class="bg"></div>
+    	</div>
+    	<div class="right">
+    		<div class="bg"></div>
+    	</div>
+    	<div class="text"></div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script> 
+      !window.jQuery && document.write('<script src="jquery-3.0.0.min.js"><\/script>');
+    </script> 
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script>
+    	var C = function(id){
+    		this.box = $("#"+id);
+    		this.left = this.box.find(".left");
+    		this.right = this.box.find(".right");
+    		this.mask = this.box.find(".mask");
+    		this.text = this.box.find(".text");
+    		this.d = 0;
+    		this.A = null;
+    		this.init();
+    	}
+    	C.prototype = {
+    		init : function(){
+    			var T = this;
+    			this.A = window.setInterval(function(){T.change()},80);
+    		},
+    		change : function(){
+    			var T = this;
+    			if(this.d>180){
+    				if(this.d>360){
+    					window.clearInterval(this.A);
+    					this.A = null;
+    					return;
+    				}
+    				this.right.show();
+    				this.mask.hide();
+    			}
+    			this.text.text(parseInt(this.d/3.6));
+    			this.left.css({
+    				"-webkit-transform":"rotate("+this.d+"deg)",
+    				"-moz-transform":"rotate("+this.d+"deg)"
+    			})
+    			this.d += 6;
+    		}
+    	}
+    	new C("cricle");
+    </script>
+  </body>
+</html>

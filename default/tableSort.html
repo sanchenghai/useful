@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="自制前端模版" />
+    <meta name="author" contect="wq, king_wangqin@163.com" />
+    <title>wq的前端模版——2016-06-21</title>
+
+    <!-- Bootstrap -->
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <table id="table" border="1">
+        <tr>
+            <th id="name">姓名</th>
+            <th id="power">力量</th>
+            <th id="agility">敏捷</th>
+            <th id="iq">智力</th>
+        </tr>
+    </table>
+
+    <!-- jQuery -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script> 
+      !window.jQuery && document.write('<script src="jquery-3.0.0.min.js"><\/script>');
+    </script> 
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script>
+          var data = [{
+        name: '德鲁伊',
+        power: 17,
+        agility: 24,
+        iq: 13
+    }, {
+        name: '月之骑士',
+        power: 15,
+        agility: 22,
+        iq: 16
+    }, {
+        name: '众神之王',
+        power: 19,
+        agility: 15,
+        iq: 20
+    }, {
+        name: '流浪剑客',
+        power: 23,
+        agility: 15,
+        iq: 14
+    }];
+
+    ! function() { //初始化渲染
+        var table = $('table');
+        for (var i = 0; i < data.length; i++) {
+            item = '<tr><td class="name">' + data[i].name + '</td><td class="power">' + data[i].power + '</td><td class="agility">' + data[i].agility + '</td><td class="iq">' + data[i].iq + '</td></tr>';
+            table.append(item);
+        }
+    }()
+
+    ! function() {
+        var count_name = 0,count_power = 0,count_agility = 0,count_iq = 0;
+
+        $('#name').click(function() {
+          count_power = 0,count_agility = 0,count_iq = 0; //将其他排序列状态置零，也就是说当点了姓名进行排序之后，若再点其它排序，那么必然是从升序开始
+            if (count_name % 2 === 1) { //奇数升序
+                data = sort(data, 'name', 'unicode,ascend');
+            } else { //偶数降序
+                data = sort(data, 'name', 'unicode,descend');
+            }
+            count_name++;
+
+            //视图层渲染
+            var area = $("tr").slice(1);
+            for (var i = 0; i < data.length; i++) {
+                area.eq(i).find('.name').text(data[i].name);
+                area.eq(i).find('.power').text(data[i].power);
+                area.eq(i).find('.agility').text(data[i].agility);
+                area.eq(i).find('.iq').text(data[i].iq);
+            }
+        })
+        $('#power').click(function() {
+            count_name = 0,count_agility = 0,count_iq = 0;
+            if (count_power % 2 === 1) {
+                data = sort(data, 'power', 'number,ascend');
+            } else {
+                data = sort(data, 'power', 'number,descend');
+            }
+            count_power++;
+
+            var area = $("tr").slice(1);
+            for (var i = 0; i < data.length; i++) {
+                area.eq(i).find('.name').text(data[i].name);
+                area.eq(i).find('.power').text(data[i].power);
+                area.eq(i).find('.agility').text(data[i].agility);
+                area.eq(i).find('.iq').text(data[i].iq);
+            }
+        })
+        $('#agility').click(function() {
+            count_name = 0,count_power = 0,count_iq = 0;
+            if (count_agility % 2 === 1) {
+                data = sort(data, 'agility', 'number,ascend');
+            } else {
+                data = sort(data, 'agility', 'number,descend');
+            }
+            count_agility++;
+
+            var area = $("tr").slice(1);
+            for (var i = 0; i < data.length; i++) {
+                area.eq(i).find('.name').text(data[i].name);
+                area.eq(i).find('.power').text(data[i].power);
+                area.eq(i).find('.agility').text(data[i].agility);
+                area.eq(i).find('.iq').text(data[i].iq);
+            }
+        })
+        $('#iq').click(function() {
+            count_name = 0,count_power = 0,count_agility = 0;
+            if (count_iq % 2 === 1) {
+                data = sort(data, 'iq', 'number,ascend');
+            } else {
+                data = sort(data, 'iq', 'number,descend');
+            }
+            count_iq++;
+
+            var area = $("tr").slice(1);
+            for (var i = 0; i < data.length; i++) {
+                area.eq(i).find('.name').text(data[i].name);
+                area.eq(i).find('.power').text(data[i].power);
+                area.eq(i).find('.agility').text(data[i].agility);
+                area.eq(i).find('.iq').text(data[i].iq);
+            }
+        })
+    }()
+
+    //对数据进行排序
+    function sort(data, field, compareFunction) {
+        var handler = {
+            'unicode,ascend': function(pre, next) {
+                if (pre[field] > next[field])
+                    return -1;
+                else
+                    return 1;
+            },
+            'unicode,descend': function(pre, next) {
+                if (pre[field] > next[field])
+                    return 1;
+                else
+                    return -1;
+            },
+            'number,ascend': function(pre, next) {
+                return next[field] - pre[field];
+            },
+            'number,descend': function(pre, next) {
+                return pre[field] - next[field];
+            }
+        }
+        if (typeof compareFunction === 'string') {
+            data.sort(handler[compareFunction]);
+        } else if (typeof compareFunction === 'function')
+            data.sort(compareFunction);
+        else
+            data.sort();
+        return data;
+    }
+    </script>
+  </body>
+</html>

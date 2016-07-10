@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="自制前端模版" />
+    <meta name="author" contect="wq, king_wangqin@163.com" />
+    <title>wq的前端模版——2016-06-21</title>
+
+    <!-- Bootstrap -->
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #demo {
+          width: 100px;
+          height: 100px;
+          background-color: #fff;
+          position: relative;
+          border: 2px solid #333;
+          margin: 100px auto;
+      }
+       
+      #demo:after, #demo:before {
+          border: solid transparent;
+          content: ' ';
+          height: 0;
+          left: 100%;
+          position: absolute;
+          width: 0;
+      }
+       
+      #demo:after {
+          border-width: 10px;
+          border-left-color: #fff;
+          top: 20px;
+      }
+       
+      #demo:before {
+          border-width: 12px;
+          border-left-color: #000;
+          top: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <!-- jQuery -->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script> 
+      !window.jQuery && document.write('<script src="jquery-3.0.0.min.js"><\/script>');
+    </script> 
+    <!-- Bootstrap -->
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>

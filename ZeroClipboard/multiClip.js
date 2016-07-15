@@ -1,4 +1,5 @@
 //使用的是ZeroClipboard的示例
+//http://www.cnblogs.com/yjzhu/archive/2012/11/05/2754818.html
 function goClip(){
     var clipButton = $(".wqClipButton");
     console.log(clipButton.length);

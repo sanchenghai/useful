@@ -1,3 +1,13 @@
 text-overflow:ellipsis;
 white-space: nowrap;
 overflow: hidden;
+
+
+
+
+/* http://www.css88.com/archives/5206/comment-page-1 */
+display: -webkit-box;             /*必须结合的属性 ，将对象作为弹性伸缩盒子模型显示*/ 
+-webkit-box-orient: vertical;     /*必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式*/
+-webkit-line-clamp: 2;            /*必须结合的属性 ，设置行数*/ 
+text-overflow: ellipsis;
+overflow : hidden;

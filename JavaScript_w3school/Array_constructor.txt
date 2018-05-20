@@ -1,0 +1,54 @@
+定义和用法
+constructor 属性返回对创建此对象的数组函数的引用。
+
+语法
+object.constructor
+
+实例
+
+例子 1
+在本例中，我们将展示如何使用 constructor 属性：
+<script type="text/javascript">
+
+var test=new Array();
+
+if (test.constructor==Array)
+{
+document.write("This is an Array");
+}
+if (test.constructor==Boolean)
+{
+document.write("This is a Boolean");
+}
+if (test.constructor==Date)
+{
+document.write("This is a Date");
+}
+if (test.constructor==String)
+{
+document.write("This is a String");
+}
+
+</script>
+输出：
+This is an Array
+
+例子 2
+在本例中，我们将展示如何使用 constructor 属性：
+<script type="text/javascript">
+
+function employee(name,job,born)
+{
+this.name=name;
+this.job=job;
+this.born=born;
+}
+
+var bill=new employee("Bill Gates","Engineer",1985);
+
+document.write(bill.constructor);
+
+</script>
+输出：
+function employee(name, job, born)
+{this.name = name; this.job = job; this.born = born;}

@@ -1,0 +1,22 @@
+定义和用法
+valueOf() 方法可返回 Boolean 对象的原始值。
+
+语法
+booleanObject.valueOf()
+
+返回值
+booleanObject 的原始布尔值。
+
+抛出
+如果调用该方法的对象不是 Boolean，则抛出异常 TypeError。
+
+实例
+在本例中，我们将创建一个 Boolean 对象，并使用 valueOf() 来取得此对象的原始值：
+<script type="text/javascript">
+
+var boo = new Boolean(false)
+document.write(boo.valueOf())
+
+</script>
+输出：
+false

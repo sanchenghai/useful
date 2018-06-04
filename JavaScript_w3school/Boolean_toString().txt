@@ -1,0 +1,25 @@
+定义和用法
+toString() 方法可把一个逻辑值转换为字符串，并返回结果。
+
+语法
+booleanObject.toString()
+
+返回值
+根据原始布尔值或者 booleanObject 对象的值返回字符串 "true" 或 "false"。
+
+抛出
+如果调用该方法的对象不是 Boolean，则抛出异常 TypeError。
+
+提示和注释
+注释：在 Boolean 对象被用于字符串环境中时，此方法会被自动调用。
+
+实例
+在本例中，我们将创建一个 Boolean 对象，并把它转换成字符串：
+<script type="text/javascript">
+
+ var boo = new Boolean(true)
+document.write(boo.toString())
+
+</script>
+输出：
+true

@@ -1,0 +1,32 @@
+定义和用法
+constructor 属性返回对创建此对象的 Date 函数的引用。
+
+语法
+object.constructor
+
+实例
+在本例中，我们将展示如何使用 constructor 属性：
+<script type="text/javascript">
+
+var test=new Date();
+
+if (test.constructor==Array)
+{
+document.write("This is an Array");
+}
+if (test.constructor==Boolean)
+{
+document.write("This is a Boolean");
+}
+if (test.constructor==Date)
+{
+document.write("This is a Date");
+}
+if (test.constructor==String)
+{
+document.write("This is a String");
+}
+
+</script>
+输出：
+This is a Date

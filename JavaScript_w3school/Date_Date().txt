@@ -1,0 +1,15 @@
+定义和用法
+Date() 方法可返回当天的日期和时间。
+
+语法
+Date()
+
+实例
+在本例中，我们将输出今天的日期和时间：
+<script type="text/javascript">
+
+document.write(Date())
+
+</script>
+输出：
+Fri Jun 08 2018 01:38:21 GMT+0800 (中国标准时间)

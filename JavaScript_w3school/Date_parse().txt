@@ -1,0 +1,45 @@
+定义和用法
+parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数。
+
+语法
+Date.parse(datestring)
+
+参数	描述
+datestring	必需。表示日期和时间的字符串。
+
+返回值
+指定的日期和时间据 1970/1/1 午夜（GMT 时间）之间的毫秒数。
+
+说明
+该方法是 Date 对象的静态方法。一般采用 Date.parse() 的形式来调用，而不是通过 dateobject.parse() 调用该方法。
+
+提示和注释：
+注释：Date.parse() 是 Date 对象的静态方法。
+
+实例
+例子 1
+在本例中，我们将取得从 1970/01/01 到 2005/07/08 的毫秒数：
+<script type="text/javascript">
+
+var d = Date.parse("Jul 8, 2005")
+document.write(d)
+
+</script>
+输出：
+1120752000000
+例子 2
+现在，我们将把上面的例子所输出的结果转换成年：
+<script type="text/javascript">
+
+var minutes = 1000 * 60
+var hours = minutes * 60
+var days = hours * 24
+var years = days * 365
+var t = Date.parse("Jul 8, 2005")
+var y = t/years
+document.write("It's been: " + y + " years from 1970/01/01")
+document.write(" to 2005/07/08!")
+
+</script>
+输出：
+It's been: 35.538812785388124 years from 1970/01/01 to 2005/07/08!

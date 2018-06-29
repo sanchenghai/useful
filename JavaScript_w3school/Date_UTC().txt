@@ -1,0 +1,50 @@
+定义和用法
+UTC() 方法可根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
+
+语法
+Date.UTC(year,month,day,hours,minutes,seconds,ms)
+
+
+参数	描述
+year	必需。表示年份的四位数字。
+month	必需。表示月份的整数，介于 0 ~ 11。
+day	必需。表示日期的整数，介于 1 ~ 31。
+hours	可选。表示小时的整数，介于 0 ~ 23。
+minutes	可选。表示分钟的整数，介于 0 ~ 59。
+seconds	可选。表示秒的整数，介于 0 ~ 59。
+ms	可选。表示毫秒的整数，介于 0 ~ 999。
+
+返回值
+返回指定的时间距 GMT 时间 1970 年 1 月 1 日午夜的毫秒数。
+
+说明
+Date.UTC() 是一种静态方法，因为需要使用构造函数 Date() 来调用它，而不是通过某个 Date 对象调用。
+Date.UTC() 方法的参数指定日期和时间，它们都是 UTC 时间，处于 GMT 时区。指定的 UTC 时间将转换成毫秒的形式，这样构造函数 Date() 和方法 Date.setTime() 就可以使用它了。
+
+实例
+例子 1
+在本例中，我们将根据世界时取得从 1970/01/01 到 2005/07/08 的毫秒数：
+<script type="text/javascript">
+
+var d = Date.UTC(2005,7,8)
+document.write(d)
+
+</script>
+输出：
+1123459200000
+例子 2
+现在，我们将改造上面的例子，使得输出转换为年：
+<script type="text/javascript">
+
+var minutes = 1000 * 60
+var hours = minutes * 60
+var days = hours * 24
+var years = days * 365
+var t = Date.UTC(2005,7,8)
+var y = t/years
+document.write("It's been: " + y + " years from 1970/01/01")
+document.write(" to 2005/07/08!")
+
+</script>
+输出：
+It's been: 35.62465753424657 years from 1970/01/01 to 2005/07/08!

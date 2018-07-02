@@ -1,0 +1,15 @@
+定义和用法
+Math.E 属性代表算术常量 e，即自然对数的底数，其值近似于 2.71828。
+
+语法
+Math.E
+
+实例
+返回 Euler 数：
+<script type="text/javascript">
+
+document.write("Euler's number: " + Math.E);
+
+</script>
+输出：
+Euler's number: 2.718281828459045

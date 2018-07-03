@@ -1,0 +1,15 @@
+定义和用法
+LN2 属性就是 loge2，即 2 的自然对数，其值近似于 0.69314718055994528623。
+
+语法
+Math.LN2
+
+实例
+返回 2 的自然对数：
+<script type="text/javascript">
+
+document.write("LN2: " + Math.LN2);
+
+</script>
+输出：
+LN2: 0.6931471805599453

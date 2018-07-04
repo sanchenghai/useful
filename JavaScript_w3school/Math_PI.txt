@@ -1,0 +1,15 @@
+定义和用法
+PI 属性就是 π，即圆的周长和它的直径之比。这个值近似为 3.141592653589793。
+
+语法
+Math.PI
+
+实例
+返回 PI：
+<script type="text/javascript">
+
+document.write("PI: " + Math.PI);
+
+</script>
+输出：
+PI: 3.141592653589793

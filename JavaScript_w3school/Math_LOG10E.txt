@@ -1,0 +1,15 @@
+定义和用法
+LOG10E 属性就是 log10e，即以 10 为底 e 的对数，其值近似于 0.43429448190325181667。
+
+语法
+Math.LOG10E
+
+实例
+返回以 10 为底 e 的对数：
+<script type="text/javascript">
+
+document.write("LOG10E: " + Math.LOG10E);
+
+</script>
+输出：
+LOG10E: 0.4342944819032518

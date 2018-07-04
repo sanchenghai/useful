@@ -1,0 +1,13 @@
+定义和用法
+SQRT2 属性返回 2 的平方根。这个值近似为 1.4142135623730951。
+语法
+Math.SQRT2
+实例
+返回 2 的平方根：
+<script type="text/javascript">
+
+document.write("SQRT2: " + Math.SQRT2);
+
+</script>
+输出：
+SQRT2: 1.4142135623730951

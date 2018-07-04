@@ -1,0 +1,15 @@
+定义和用法
+LOG2E 属性就是 log2e，即以 2 为底 e 的对数，其值近似于 1.442695040888963387。
+
+语法
+Math.LOG2E
+
+实例
+返回以 2 为底 e 的对数：
+<script type="text/javascript">
+
+document.write("LOG2E: " + Math.LOG2E);
+
+</script>
+输出：
+LOG2E: 1.4426950408889634

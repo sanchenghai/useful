@@ -1,0 +1,25 @@
+定义和用法
+abs() 方法可返回数的绝对值。
+
+语法
+Math.abs(x)
+
+参数	描述
+x	必需。必须是一个数值。
+
+返回值
+x 的绝对值。
+
+实例
+在本例中，我将取得正数和负数的绝对值：
+<script type="text/javascript">
+
+document.write(Math.abs(7.25) + "<br />")
+document.write(Math.abs(-7.25) + "<br />")
+document.write(Math.abs(7.25-10))
+
+</script>
+输出：
+7.25
+7.25
+2.75

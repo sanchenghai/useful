@@ -1,0 +1,27 @@
+定义和用法
+toSource() 方法返回表示对象源代码的字符串。
+
+语法
+object.toSource()
+
+提示和注释
+注释：该方法在 Internet Explorer 中无效。
+
+实例
+下面的例子向您展示 toSource() 方法的用法：
+<script type="text/javascript">
+
+function employee(name,job,born)
+{
+this.name=name;
+this.job=job;
+this.born=born;
+}
+
+var bill=new employee("Bill Gates","Engineer",1985);
+
+document.write(bill.toSource());
+
+</script>
+输出：
+({name:"Bill Gates", job:"Engineer", born:1985})

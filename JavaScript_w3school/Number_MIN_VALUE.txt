@@ -1,0 +1,15 @@
+定义和用法
+MIN_VALUE 属性是 JavaScript 中可表示的最小的数（接近 0 ，但不是负数）。它的近似值为 5 x 10-324。
+
+语法
+Number.MIN_VALUE
+
+实例
+返回 JavaScript 中可能的最小值：
+<script type="text/javascript">
+
+document.write(Number.MIN_VALUE);
+
+</script>
+输出：
+5e-324

@@ -1,0 +1,15 @@
+定义和用法
+MAX_VALUE 属性是 JavaScript 中可表示的最大的数。它的近似值为 1.7976931348623157 x 10308。
+
+语法
+Number.MAX_VALUE
+
+实例
+返回 JavaScript 中可能的最大值：
+<script type="text/javascript">
+
+document.write(Number.MAX_VALUE);
+
+</script>
+输出：
+1.7976931348623157e+308

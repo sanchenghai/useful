@@ -1,0 +1,18 @@
+定义和用法
+i 修饰符用于执行对大小写不敏感的匹配。
+
+语法
+new RegExp("regexp","i")
+
+直接量语法：
+/regexp/i
+
+浏览器支持
+所有主流浏览器都支持 i 修饰符。
+
+实例
+对字符串中的 "w3school" 进行不分大小写的搜索：
+var str="Visit W3School";
+var patt1=/w3school/i;
+下面被标记的文本显示了表达式获得匹配的位置：
+Visit W3School

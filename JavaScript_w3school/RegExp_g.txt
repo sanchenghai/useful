@@ -1,0 +1,26 @@
+定义和用法
+g 修饰符用于执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+
+语法
+new RegExp("regexp","g")
+
+直接量语法：
+/regexp/g
+
+浏览器支持
+所有主流浏览器都支持 g 修饰符。
+
+实例
+例子 1
+对 "is" 进行全局搜索：
+var str="Is this all there is?";
+var patt1=/is/g;
+下面被标记的文本显示了表达式获得匹配的位置：
+Is this all there is?
+
+例子 2
+对 "is" 进行全局且大小写不敏感的搜索：
+var str="Is this all there is?";
+var patt1=/is/gi;
+下面被标记的文本显示了表达式获得匹配的位置：
+Is this all there is?

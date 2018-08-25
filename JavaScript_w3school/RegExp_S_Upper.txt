@@ -1,0 +1,25 @@
+定义和用法
+\S 元字符用于查找非空白字符。
+空白字符可以是：
+空格符 (space character)
+制表符 (tab character)
+回车符 (carriage return character)
+换行符 (new line character)
+垂直换行符 (vertical tab character)
+换页符 (form feed character)
+
+语法
+new RegExp("\S")
+
+直接量语法：
+/\S/
+
+浏览器支持
+所有主流浏览器都支持 \S 元字符。
+
+实例
+对字符串中的非空白字符进行全局搜索：
+var str="Is this all there is?";
+var patt1=/\S/g;
+下面被标记的文本显示了表达式获得匹配的位置：
+Is this all there is?

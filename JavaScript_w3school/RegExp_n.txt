@@ -1,0 +1,19 @@
+定义和用法
+\n 元字符用于查找换行符。
+\n 返回换行符被找到的位置。如果未找到匹配，则返回 -1。
+
+语法
+new RegExp("\n")
+
+直接量语法：
+/\n/
+
+浏览器支持
+所有主流浏览器都支持 \n 元字符。
+
+实例
+搜索字符串中的换行字符：
+var str="Visit W3School.\nLearn Javascript.";
+var patt1=/\n/;
+下面被标记的文本显示了表达式获得匹配的位置：
+Visit W3School.\nLearn Javascript.

@@ -1,0 +1,19 @@
+定义和用法
+\uxxxx 元字符用于查找以十六进制数 xxxx 规定的 Unicode 字符。
+如果未找到匹配，则返回 null。
+
+语法
+new RegExp("\uxxxx")
+
+直接量语法：
+/\uxxxx/
+
+浏览器支持
+所有主流浏览器都支持 \uxxxx 元字符。
+
+实例
+对字符串中的十六进制 0057 (W) 进行全局搜索：
+var str="Visit W3School. Hello World!";
+var patt1=/\u0057/g;
+下面被标记的文本显示了表达式获得匹配的位置：
+Visit W3School. Hello World!

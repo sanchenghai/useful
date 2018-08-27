@@ -1,0 +1,19 @@
+定义和用法
+\xdd 元字符查找以十六进制数 dd 规定的字符。
+如果未找到匹配，则返回 null。
+
+语法
+new RegExp("\xdd")
+
+直接量语法：
+/\xdd/
+
+浏览器支持
+所有主流浏览器都支持 \xdd 元字符。
+
+实例
+对字符串中的十六进制 57 (W) 进行全局搜索：
+var str="Visit W3School. Hello World!";
+var patt1=/\x57/g;
+下面被标记的文本显示了表达式获得匹配的位置：
+Visit W3School. Hello World!

@@ -1,0 +1,26 @@
+定义和用法
+n+ 量词匹配包含至少一个 n 的任何字符串。
+
+语法
+new RegExp("n+")
+
+直接量语法：
+/n+/
+
+浏览器支持
+所有主流浏览器都支持 + 量词。
+
+实例
+例子 1
+对至少一个 "o" 进行全局搜索：
+var str="Hellooo World! Hello W3School!";
+var patt1=/o+/g;
+下面被标记的文本显示了表达式获得匹配的位置：
+Hellooo World! Hello W3School!
+
+例子 2
+对至少一个单词字符进行全局搜索：
+var str="Hello World! Hello W3School!";
+var patt1=/\w+/g;
+下面被标记的文本显示了表达式获得匹配的位置：
+Hello World! Hello W3School!

@@ -1,0 +1,18 @@
+定义和用法
+?=n 量词匹配任何其后紧接指定字符串 n 的字符串。
+
+语法
+new RegExp("regexp(?=n)")
+
+直接量语法：
+/regexp(?=n)/
+
+浏览器支持
+所有主流浏览器都支持 ?= 量词。
+
+实例
+对其后紧跟 "all" 的 "is" 进行全局搜索：
+var str="Is this all there is";
+var patt1=/is(?= all)/g;
+下面被标记的文本显示了表达式获得匹配的位置：
+Is this all there is

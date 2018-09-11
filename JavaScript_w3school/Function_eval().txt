@@ -1,0 +1,54 @@
+定义和用法
+eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码。
+
+语法
+eval(string)
+
+参数	描述
+string	必需。要计算的字符串，其中含有要计算的 JavaScript 表达式或要执行的语句。
+
+返回值
+通过计算 string 得到的值（如果有的话）。
+
+说明
+该方法只接受原始字符串作为参数，如果 string 参数不是原始字符串，那么该方法将不作任何改变地返回。因此请不要为 eval() 函数传递 String 对象来作为参数。
+如果试图覆盖 eval 属性或把 eval() 方法赋予另一个属性，并通过该属性调用它，则 ECMAScript 实现允许抛出一个 EvalError 异常。
+
+抛出
+如果参数中没有合法的表达式和语句，则抛出 SyntaxError 异常。
+如果非法调用 eval()，则抛出 EvalError 异常。
+如果传递给 eval() 的 Javascript 代码生成了一个异常，eval() 将把该异常传递给调用者。
+
+提示和注释
+提示：虽然 eval() 的功能非常强大，但在实际使用中用到它的情况并不多。
+
+实例
+例子 1
+在本例中，我们将在几个字符串上运用 eval()，并看看返回的结果：
+<script type="text/javascript">
+
+eval("x=10;y=20;document.write(x*y)")
+
+document.write(eval("2+2"))
+
+var x=10
+document.write(eval(x+17))
+
+</script>
+输出：
+200
+4
+27
+例子 2
+看一下在其他情况中，eval() 返回的结果：
+eval("2+3")	// 返回 5
+var myeval = eval;	// 可能会抛出 EvalError 异常
+myeval("2+3");	// 可能会抛出 EvalError 异常
+可以使用下面这段代码来检测 eval() 的参数是否合法：
+try  {
+     alert("Result:" + eval(prompt("Enter an expression:","")));
+     }
+
+catch(exception) {
+     alert(exception);
+     }

@@ -1,0 +1,38 @@
+定义和用法
+isNaN() 函数用于检查其参数是否是非数字值。
+
+语法
+isNaN(x)
+
+参数	描述
+x	必需。要检测的值。
+
+返回值
+如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。如果 x 是其他值,则返回 false。
+
+说明
+isNaN() 函数可用于判断其参数是否是 NaN，该值表示一个非法的数字（比如被 0 除后得到的结果）。
+如果把 NaN 与任何值（包括其自身）相比得到的结果均是 false，所以要判断某个值是否是 NaN，不能使用 == 或 === 运算符。正因为如此，isNaN() 函数是必需的。
+
+提示和注释
+提示：isNaN() 函数通常用于检测 parseFloat() 和 parseInt() 的结果，以判断它们表示的是否是合法的数字。当然也可以用 isNaN() 函数来检测算数错误，比如用 0 作除数的情况。
+
+实例
+检查数字是否非法：
+<script>
+
+document.write(isNaN(123));
+document.write(isNaN(-1.23));
+document.write(isNaN(5-2));
+document.write(isNaN(0));
+document.write(isNaN("Hello"));
+document.write(isNaN("2005/12/12"));
+
+</script>
+输出：
+false
+false
+false
+false
+true
+true

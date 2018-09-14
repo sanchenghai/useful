@@ -1,0 +1,36 @@
+定义和用法
+Number() 函数把对象的值转换为数字。
+
+语法
+Number(object)
+
+参数	描述
+object	必需。JavaScript 对象。
+
+返回值
+如果参数是 Date 对象，Number() 返回从 1970 年 1 月 1 日至今的毫秒数。
+如果对象的值无法转换为数字，那么 Number() 函数返回 NaN。
+
+实例
+在本例中，我们将尝试把不同的对象转换为数字：
+<script type="text/javascript">
+
+var test1= new Boolean(true);
+var test2= new Boolean(false);
+var test3= new Date();
+var test4= new String("999");
+var test5= new String("999 888");
+
+document.write(Number(test1)+ "<br />");
+document.write(Number(test2)+ "<br />");
+document.write(Number(test3)+ "<br />");
+document.write(Number(test4)+ "<br />");
+document.write(Number(test5)+ "<br />");
+
+</script>
+输出：
+1
+0
+1256657776588
+999
+NaN

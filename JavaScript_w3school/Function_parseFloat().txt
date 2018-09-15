@@ -1,0 +1,70 @@
+定义和用法
+parseFloat() 函数可解析一个字符串，并返回一个浮点数。
+该函数指定字符串中的首个字符是否是数字。如果是，则对字符串进行解析，直到到达数字的末端为止，然后以数字返回该数字，而不是作为字符串。
+
+语法
+parseFloat(string)
+
+参数	描述
+string	必需。要被解析的字符串。
+
+详细说明
+parseFloat 是全局函数，不属于任何对象。
+parseFloat 将它的字符串参数解析成为浮点数并返回。如果在解析过程中遇到了正负号（+ 或 -）、数字 (0-9)、小数点，或者科学记数法中的指数（e 或 E）以外的字符，则它会忽略该字符以及之后的所有字符，返回当前已经解析到的浮点数。同时参数字符串首位的空白符会被忽略。
+如果参数字符串的第一个字符不能被解析成为数字，则 parseFloat 返回 NaN。
+
+提示：您可以通过调用 isNaN 函数来判断 parseFloat 的返回结果是否是 NaN。如果让 NaN 作为了任意数学运算的操作数，则运算结果必定也是 NaN。
+
+返回值
+返回解析后的数字。
+
+提示和注释
+注释：开头和结尾的空格是允许的。
+提示：如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN。
+提示：如果只想解析数字的整数部分，请使用 parseInt() 方法。
+
+实例
+例子 1
+在本例中，我们将使用 parseFloat() 来解析不同的字符串：
+<script type="text/javascript">
+
+document.write(parseFloat("10"))
+document.write(parseFloat("10.00"))
+document.write(parseFloat("10.33"))
+document.write(parseFloat("34 45 66"))
+document.write(parseFloat(" 60 "))
+document.write(parseFloat("40 years"))
+document.write(parseFloat("He was 40"))
+
+</script>
+输出：
+10
+10
+10.33
+34
+60
+40
+NaN
+亲自试一试
+例子 2
+下面的例子都返回 3.14：
+<script type="text/javascript">
+
+document.write(parseFloat("3.14"))
+document.write(parseFloat("314e-2"))
+document.write(parseFloat("0.0314E+2"))
+document.write(parseFloat("3.14more non-digit characters"))
+
+</script>
+输出：
+3.14
+亲自试一试
+例子 3
+下面的例子将返回 NaN：
+<script type="text/javascript">
+
+document.write(parseFloat("FF2"))
+
+</script>
+输出：
+NaN

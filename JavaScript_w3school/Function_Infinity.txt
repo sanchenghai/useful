@@ -1,0 +1,26 @@
+定义和用法
+Infinity 属性用于存放表示正无穷大的数值。
+
+语法
+Infinity
+
+说明
+无法使用 for/in 循环来枚举 Infinity 属性，也不能用 delete 运算符来删除它。
+Infinity 不是常量，可以把它设置为其他值。
+
+实例
+在本例中，我们将展示当一个数超出了 infinity 的限制发生的情况：
+<script type="text/javascript">
+
+var t1=1.7976931348623157E+10308
+document.write(t1)
+
+document.write("<br />")
+
+var t2=-1.7976931348623157E+10308
+document.write(t2)
+
+</script>
+输出：
+Infinity
+-Infinity

@@ -1,0 +1,43 @@
+定义和用法
+closed 属性可返回一个布尔值，该值声明了窗口是否已经关闭。该属性为只读。
+当浏览器窗口关闭时，表示该窗口的 Windows 对象并不会消失，它将继续存在，不过它的 closed 属性将设置为 true。
+
+语法
+window.closed
+
+实例
+下面的例子可检测新窗口是否已被关闭：
+<html>
+<head>
+<script type="text/javascript">
+function ifClosed()
+  {
+  document.write("'myWindow' has been closed!")
+  }
+
+function ifNotClosed()
+  {
+  document.write("'myWindow' has not been closed!")
+  }
+
+function checkWin()
+  {
+  if (myWindow.closed)
+    ifClosed()
+  else
+    ifNotClosed()
+  }
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write("This is 'myWindow'")
+</script>
+
+<input type="button" value="Has 'myWindow' been closed?"
+onclick="checkWin()">
+
+</body>
+</html>

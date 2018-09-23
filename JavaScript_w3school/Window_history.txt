@@ -1,0 +1,1 @@
+对 History 对象的只读引用。请参数 History 对象。

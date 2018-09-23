@@ -1,0 +1,1 @@
+对 Navigator 对象的只读引用。请参数 Navigator 对象。

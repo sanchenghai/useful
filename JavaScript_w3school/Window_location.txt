@@ -1,0 +1,1 @@
+用于窗口或框架的 Location 对象。请参阅 Location 对象。

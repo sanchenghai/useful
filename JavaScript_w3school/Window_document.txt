@@ -1,0 +1,1 @@
+	对 Document 对象的只读引用。请参阅 Document 对象。

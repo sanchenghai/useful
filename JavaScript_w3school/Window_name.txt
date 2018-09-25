@@ -1,0 +1,31 @@
+定义和用法
+name 属性可设置或返回存放窗口的名称的一个字符串。
+该名称是在 open() 方法创建窗口时指定的或者使用一个 <frame> 标记的 name 属性指定的。
+窗口的名称可以用作一个 <a> 或者 <form> 标记的 target 属性的值。以这种方式使用 target 属性声明了超链接文档或表单提交结果应该显示于指定的窗口或框架中。
+
+语法
+window.name=name
+
+实例
+下面的例子可返回新窗口的名称：
+<html>
+<head>
+<script type="text/javascript">
+function checkWin()
+  {
+  document.write(myWindow.name)
+  }
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','MyName','width=200,height=100')
+myWindow.document.write("This is 'myWindow'")
+</script>
+
+<input type="button" value="What's the name of 'myWindow'?"
+onclick="checkWin()">
+
+</body>
+</html>

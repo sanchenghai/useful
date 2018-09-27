@@ -1,0 +1,24 @@
+定义和用法
+outerwidth 属性是一个只读的整数，声明了整个窗口的宽度。
+
+语法
+window.outerwidth=pixels
+
+提示和注释
+提示：IE 不支持此属性，且没有提供替代的属性。
+
+实例
+下面的例子可把新窗口设置为 100x100 像素：
+<html>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','')
+myWindow.outerheight="100"
+myWindow.outerwidth="100"
+myWindow.document.write("This is 'myWindow'")
+myWindow.focus()
+</script>
+
+</body>
+</html>

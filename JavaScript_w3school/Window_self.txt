@@ -1,0 +1,27 @@
+定义和用法
+self 属性可返回对窗口自身的只读引用。等价于 Window 属性。
+
+语法
+window.self
+
+实例
+下面的例子窗口是否在一个框架中，如果是，则跳出框架：
+<html>
+<head>
+<script type="text/javascript">
+function breakout()
+  {
+  if (window.top!=window.self)
+    {
+    window.top.location="tryjs_breakout.htm"
+    }
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="breakout()"
+value="Break out of frame!">
+
+</body>
+</html>

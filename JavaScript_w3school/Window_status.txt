@@ -1,0 +1,21 @@
+定义和用法
+status 属性可设置或返回窗口状态栏中的文本。
+
+语法
+window.status=sometext
+
+说明
+status 属性是一个可读可写的字符串，声明了要在窗口状态栏中显示的一条消息。通常显示这条消息的时间是有限的，直到其他的消息将它覆盖，或者用户把鼠标移动到窗口的其他区域为止。当擦除了 status 声明的消息时，状态栏要么恢复为它默认的空白状态，要么是再次显示出属性 defaultStatus 声明的默认消息。
+据我们所知，不少浏览器已经关闭了脚本化它们的状态栏的功能。这是一项安全措施，防止隐藏了超链接真正目的的钓鱼攻击。
+
+实例
+下面的例子讲在状态栏设置文本：
+<html>
+<body>
+
+<script type="text/javascript">
+window.status="Some text in the status bar!!"
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+定义和用法
+blur() 方法可把键盘焦点从顶层窗口移开。
+
+语法
+window.blur()
+
+说明
+方法 blur() 可把键盘焦点从顶层浏览器窗口移走，整个窗口由 Window 对象指定。哪个窗口最终获得键盘焦点并没有指定。
+
+提示和注释
+注释：在某些浏览器上，该方法可能无效。
+
+实例
+<html>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write("This is 'myWindow'")
+myWindow.blur()
+</script>
+
+</body>
+</html>

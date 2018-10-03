@@ -1,0 +1,30 @@
+定义和用法
+clearInterval() 方法可取消由 setInterval() 设置的 timeout。
+clearInterval() 方法的参数必须是由 setInterval() 返回的 ID 值。
+
+语法
+clearInterval(id_of_setinterval)
+
+参数	描述
+id_of_setinterval	由 setInterval() 返回的 ID 值。
+
+实例
+下面这个例子将每隔 50 毫秒调用 clock() 函数。您也可以使用一个按钮来停止这个 clock：
+<html>
+<body>
+
+<input type="text" id="clock" size="35" />
+<script language=javascript>
+var int=self.setInterval("clock()",50)
+function clock()
+  {
+  var t=new Date()
+  document.getElementById("clock").value=t
+  }
+</script>
+</form>
+<button onclick="int=window.clearInterval(int)">
+Stop interval</button>
+
+</body>
+</html>

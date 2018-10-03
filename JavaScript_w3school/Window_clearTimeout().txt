@@ -1,0 +1,38 @@
+定义和用法
+clearTimeout() 方法可取消由 setTimeout() 方法设置的 timeout。
+
+语法
+clearTimeout(id_of_settimeout)
+
+参数	描述
+id_of_settimeout	由 setTimeout() 返回的 ID 值。该值标识要取消的延迟执行代码块。
+
+实例
+下面的例子每秒调用一次 timedCount() 函数。您也可以使用一个按钮来终止这个定时消息：
+<html>
+<head>
+<script type="text/javascript">
+var c=0
+var t
+function timedCount()
+  {
+  document.getElementById('txt').value=c
+  c=c+1
+  t=setTimeout("timedCount()",1000)
+  }
+function stopCount()
+  {
+  clearTimeout(t)
+  }
+</script>
+</head>
+<body>
+
+<form>
+<input type="button" value="Start count!" onClick="timedCount()">
+<input type="text" id="txt">
+<input type="button" value="Stop count!" onClick="stopCount()">
+</form>
+
+</body>
+</html>

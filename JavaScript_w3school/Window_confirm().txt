@@ -1,0 +1,41 @@
+定义和用法
+confirm() 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框。
+
+语法
+confirm(message)
+
+参数	描述
+message	要在 window 上弹出的对话框中显示的纯文本（而非 HTML 文本）
+
+说明
+如果用户点击确定按钮，则 confirm() 返回 true。如果点击取消按钮，则 confirm() 返回 false。
+在用户点击确定按钮或取消按钮把对话框关闭之前，它将阻止用户对浏览器的所有输入。在调用 confirm() 时，将暂停对 JavaScript 代码的执行，在用户作出响应之前，不会执行下一条语句。
+
+提示和注释
+提示：对话框按钮的文字是不可改变的，因此请小心地编写问题或消息，使它适合用确认和取消来回答。
+
+实例
+<html>
+<head>
+<script type="text/javascript">
+function disp_confirm()
+  {
+  var r=confirm("Press a button")
+  if (r==true)
+    {
+    document.write("You pressed OK!")
+    }
+  else
+    {
+    document.write("You pressed Cancel!")
+    }
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="disp_confirm()"
+value="Display a confirm box" />
+
+</body>
+</html>

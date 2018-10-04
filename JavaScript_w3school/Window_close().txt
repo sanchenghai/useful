@@ -1,0 +1,33 @@
+定义和用法
+close() 方法用于关闭浏览器窗口。
+
+语法
+window.close()
+
+说明
+方法 close() 将关闭有 window 指定的顶层浏览器窗口。某个窗口可以通过调用 self.close() 或只调用 close() 来关闭其自身。
+只有通过 JavaScript 代码打开的窗口才能够由 JavaScript 代码关闭。这阻止了恶意的脚本终止用户的浏览器。
+
+实例
+下面的例子可关闭新的浏览器：
+<html>
+<head>
+<script type="text/javascript">
+function closeWin()
+  {
+  myWindow.close()
+  }
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write("This is 'myWindow'")
+</script>
+
+<input type="button" value="Close 'myWindow'"
+onclick="closeWin()" />
+
+</body>
+</html>

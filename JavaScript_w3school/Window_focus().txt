@@ -1,0 +1,19 @@
+定义和用法
+focus() 方法可把键盘焦点给予一个窗口。
+
+语法
+window.focus()
+
+实例
+下面的例子可确保新的窗口得到焦点：
+<html>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write("This is 'myWindow'")
+myWindow.focus()
+</script>
+
+</body>
+</html>

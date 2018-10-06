@@ -1,0 +1,36 @@
+定义和用法
+moveTo() 方法可把窗口的左上角移动到一个指定的坐标。
+
+语法
+window.moveTo(x,y)
+
+参数	描述
+x	窗口新位置的 x 坐标
+y	窗口新位置的 y 坐标
+
+提示和注释
+注释：出于安全方面的原因，浏览器限制此方法使其不能把窗口移出屏幕。
+
+实例
+下面的例子讲把新窗口移动到指定的坐标：
+<html>
+<head>
+<script type="text/javascript">
+function moveWin()
+  {
+  myWindow.moveTo(50,50)
+  }
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write("This is 'myWindow'")
+</script>
+
+<input type="button" value="Move 'myWindow'"
+onclick="moveWin()" />
+
+</body>
+</html>

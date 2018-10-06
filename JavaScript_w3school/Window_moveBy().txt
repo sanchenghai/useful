@@ -1,0 +1,33 @@
+定义和用法
+moveBy() 方法可相对窗口的当前坐标把它移动指定的像素。
+
+语法
+window.moveBy(x,y)
+
+参数	描述
+x	要把窗口右移的像素数
+y	要把窗口下移的像素数
+
+实例
+下面的例子将把窗口相对其当前位置移动 50 个像素：
+<html>
+<head>
+<script type="text/javascript">
+function moveWin()
+  {
+  myWindow.moveBy(50,50)
+  }
+</script>
+</head>
+<body>
+
+<script type="text/javascript">
+myWindow=window.open('','','width=200,height=100')
+myWindow.document.write("This is 'myWindow'")
+</script>
+
+<input type="button" value="Move 'myWindow'"
+onclick="moveWin()" />
+
+</body>
+</html>

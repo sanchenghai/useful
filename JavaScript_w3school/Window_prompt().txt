@@ -1,0 +1,35 @@
+定义和用法
+prompt() 方法用于显示可提示用户进行输入的对话框。
+
+语法
+prompt(text,defaultText)
+
+参数	描述
+text	可选。要在对话框中显示的纯文本（而不是 HTML 格式的文本）。
+defaultText	可选。默认的输入文本。
+
+说明
+如果用户单击提示框的取消按钮，则返回 null。如果用户单击确认按钮，则返回输入字段当前显示的文本。
+在用户点击确定按钮或取消按钮把对话框关闭之前，它将阻止用户对浏览器的所有输入。在调用 prompt() 时，将暂停对 JavaScript 代码的执行，在用户作出响应之前，不会执行下一条语句。
+
+实例 1
+<html>
+<head>
+<script type="text/javascript">
+function disp_prompt()
+  {
+  var name=prompt("Please enter your name","")
+  if (name!=null && name!="")
+    {
+    document.write("Hello " + name + "!")
+    }
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="disp_prompt()"
+value="Display a prompt box" />
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+定义和用法
+resizeTo() 方法用于把窗口大小调整为指定的宽度和高度。
+
+语法
+resizeTo(width,height)
+
+参数	描述
+width	必需。想要调整到的窗口的宽度。以像素计。
+height	可选。想要调整到的窗口的高度。以像素计。
+
+实例
+<html>
+<head>
+<script type="text/javascript">
+function resizeWindow()
+  {
+  window.resizeTo(500,300)
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="resizeWindow()"
+value="Resize window">
+
+</body>
+</html>

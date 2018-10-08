@@ -1,0 +1,27 @@
+定义和用法
+resizeBy() 方法用于根据指定的像素来调整窗口的大小。
+
+语法
+resizeBy(width,height)
+
+参数	描述
+width	必需。要使窗口宽度增加的像素数。可以是正、负数值。
+height	可选。要使窗口高度增加的像素数。可以是正、负数值。
+
+实例 1
+<html>
+<head>
+<script type="text/javascript">
+function resizeWindow()
+  {
+  window.resizeBy(-100,-100)
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="resizeWindow()"
+value="Resize window">
+
+</body>
+</html>

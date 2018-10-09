@@ -1,0 +1,46 @@
+定义和用法
+scrollBy() 方法可把内容滚动指定的像素数。
+
+语法
+scrollBy(xnum,ynum)
+
+参数	描述
+xnum	必需。把文档向右滚动的像素数。
+ynum	必需。把文档向下滚动的像素数。
+
+实例
+下面的例子可把内容滚动 100 像素：
+<html>
+<head>
+<script type="text/javascript">
+function scrollWindow()
+  {
+  window.scrollBy(100,100)
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="scrollWindow()" value="Scroll" />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+
+</body>
+</html>

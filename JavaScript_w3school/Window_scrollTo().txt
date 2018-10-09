@@ -1,0 +1,46 @@
+定义和用法
+scrollTo() 方法可把内容滚动到指定的坐标。
+
+语法
+scrollTo(xpos,ypos)
+
+参数	描述
+xpos	必需。要在窗口文档显示区左上角显示的文档的 x 坐标。
+ypos	必需。要在窗口文档显示区左上角显示的文档的 y 坐标。
+
+实例
+下面的例子可把内容滚动到位置 100,500：
+<html>
+<head>
+<script type="text/javascript">
+function scrollWindow()
+  {
+  window.scrollTo(100,500)
+  }
+</script>
+</head>
+<body>
+
+<input type="button" onclick="scrollWindow()" value="Scroll" />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<p>SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL SCROLL</p>
+
+</body>
+</html>

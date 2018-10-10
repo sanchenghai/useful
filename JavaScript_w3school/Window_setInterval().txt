@@ -1,0 +1,33 @@
+定义和用法
+setInterval() 方法可按照指定的周期（以毫秒计）来调用函数或计算表达式。
+setInterval() 方法会不停地调用函数，直到 clearInterval() 被调用或窗口被关闭。由 setInterval() 返回的 ID 值可用作 clearInterval() 方法的参数。
+
+语法
+setInterval(code,millisec[,"lang"])
+
+参数	描述
+code	必需。要调用的函数或要执行的代码串。
+millisec	必须。周期性执行或调用 code 之间的时间间隔，以毫秒计。
+
+返回值
+一个可以传递给 Window.clearInterval() 从而取消对 code 的周期性执行的值。
+
+实例
+<html>
+<body>
+
+<input type="text" id="clock" size="35" />
+<script language=javascript>
+var int=self.setInterval("clock()",50)
+function clock()
+  {
+  var t=new Date()
+  document.getElementById("clock").value=t
+  }
+</script>
+</form>
+<button onclick="int=window.clearInterval(int)">
+Stop interval</button>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+定义和用法
+appCodeName 属性是一个只读字符串，声明了浏览器的代码名。
+在所有以 Netscape 代码为基础的浏览器中，它的值是 "Mozilla"。为了兼容起见，在 Microsoft 的浏览器中，它的值也是 "Mozilla"。
+
+语法
+navigator.appCodeName
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>CodeName: ")
+document.write(navigator.appCodeName + "</p>")
+</script>
+</body>
+
+</html>

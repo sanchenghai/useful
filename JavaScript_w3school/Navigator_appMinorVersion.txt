@@ -1,0 +1,17 @@
+定义和用法
+appMinorVersion 属性可返回浏览器的次要版本。
+
+语法
+navigator.appMinorVersion
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>MinorVersion: ")
+document.write(navigator.appMinorVersion + "</p>")
+</script>
+</body>
+
+</html>

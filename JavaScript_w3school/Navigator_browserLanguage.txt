@@ -1,0 +1,17 @@
+定义和用法
+browserLanguage 属性可返回当前浏览器的语言。
+
+语法
+navigator.browserLanguage
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>BrowserLanguage: ")
+document.write(navigator.browserLanguage + "</p>")
+</script>
+</body>
+
+</html>

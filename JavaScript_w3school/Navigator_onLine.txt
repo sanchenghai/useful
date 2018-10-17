@@ -1,0 +1,18 @@
+定义和用法
+onLine 属性是一个只读的布尔值，声明了系统是否处于脱机模式。
+注释：在 IE 4+ 中，用户可以在浏览器中选择脱机工作的状态。当脱机工作被选后，系统就进入了脱机状态，内容将从缓存进行读取。
+
+语法
+navigator.onLine
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>OnLine: ")
+document.write(navigator.onLine + "</p>")
+</script>
+</body>
+
+</html>

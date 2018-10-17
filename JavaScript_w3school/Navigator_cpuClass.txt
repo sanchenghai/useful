@@ -1,0 +1,17 @@
+定义和用法
+cpuClass 属性可返回浏览器系统的 CPU 等级。
+
+语法
+navigator.cpuClass
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>CPUClass: ")
+document.write(navigator.cpuClass + "</p>")
+</script>
+</body>
+
+</html>

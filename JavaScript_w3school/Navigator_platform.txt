@@ -1,0 +1,18 @@
+定义和用法
+platform 属性是一个只读的字符串，声明了运行浏览器的操作系统和（或）硬件平台。
+虽然该属性没有标准的值集合，但它有些常用值，比如 "Win32"、"MacPPC" 以及 "Linuxi586"，等等。
+
+语法
+navigator.platform
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Platform: ")
+document.write(navigator.platform + "</p>")
+</script>
+</body>
+
+</html>

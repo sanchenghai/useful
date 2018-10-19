@@ -1,0 +1,17 @@
+定义和用法
+userLanguage 属性可返回操作系统的自然语言设置。
+
+语法
+navigator.userLanguage
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>UserLanguage: ")
+document.write(navigator.userLanguage + "</p>")
+</script>
+</body>
+
+</html>

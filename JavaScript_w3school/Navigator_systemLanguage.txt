@@ -1,0 +1,17 @@
+定义和用法
+systemLanguage 属性可返回操作系统使用的默认语言。
+
+语法
+navigator.systemLanguage
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>SystemLanguage: ")
+document.write(navigator.systemLanguage + "</p>")
+</script>
+</body>
+
+</html>

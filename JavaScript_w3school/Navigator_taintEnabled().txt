@@ -1,0 +1,19 @@
+定义和用法
+taintEnabled() 方法可返回一个布尔值，该值声明了当前浏览器是否启用了 data tainting。
+
+语法
+navigator.taintEnabled()
+
+实例
+下面的例子讲返回当前浏览器是否已启用 data tainting 的布尔值：
+<html>
+<body>
+
+<script type="text/javascript">
+alert(navigator.taintEnabled())
+</script>
+
+</body>
+</html>
+输出：
+false

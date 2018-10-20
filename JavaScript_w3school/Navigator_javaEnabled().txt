@@ -1,0 +1,22 @@
+定义和用法
+javaEnabled() 方法可返回一个布尔值，该值指示浏览器是否支持并启用了 Java。如果是，则返回 true，否则返回 false。
+
+语法
+navigator.javaEnabled()
+
+提示和注释
+提示：可以使用 navigator.javaEnabled() 来检测当前浏览器是否支持 Java，从而知道浏览器是否能显示 Java 小程序。
+
+实例
+下面的例子讲返回当前浏览器是否已启用 Java 的布尔值：
+<html>
+<body>
+
+<script type="text/javascript">
+alert(navigator.javaEnabled())
+</script>
+
+</body>
+</html>
+输出：
+true

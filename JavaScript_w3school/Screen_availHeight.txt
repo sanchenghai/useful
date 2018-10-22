@@ -1,0 +1,17 @@
+定义和用法
+availHeight 属性声明了显示浏览器的屏幕的可用高度，以像素计。在 Windows 这样的操作系统中，这个可用高度不包括分配给半永久特性（如屏幕底部的任务栏）的垂直空间。
+
+语法
+screen.availHeight
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Available Height: ")
+document.write(screen.availHeight + "</p>")
+</script>
+</body>
+
+</html>

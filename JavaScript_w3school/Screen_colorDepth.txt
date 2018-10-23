@@ -1,0 +1,17 @@
+定义和用法
+colorDepth 属性返回目标设备或缓冲器上的调色板的比特深度。
+
+语法
+screen.colorDepth
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Color Depth: ")
+document.write(screen.colorDepth + "</p>")
+</script>
+</body>
+
+</html>

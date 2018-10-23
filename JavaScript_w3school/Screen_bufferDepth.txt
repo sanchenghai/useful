@@ -1,0 +1,17 @@
+定义和用法
+bufferDepth 属性设置或返回在 off-screen bitmap buffer 中调色板的比特深度。
+
+语法
+screen.bufferDepth=number
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Buffer Depth: ")
+document.write(screen.bufferDepth + "</p>")
+</script>
+</body>
+
+</html>

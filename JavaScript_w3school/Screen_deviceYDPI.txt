@@ -1,0 +1,17 @@
+定义和用法
+deviceYDPI 属性返回显示屏幕的每英寸垂直点数。
+
+语法
+screen.deviceYDPI
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Device YDPI: ")
+document.write(screen.deviceYDPI + "</p>")
+</script>
+</body>
+
+</html>

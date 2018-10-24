@@ -1,0 +1,17 @@
+定义和用法
+deviceXDPI 属性返回显示屏幕的每英寸水平点数。
+
+语法
+screen.deviceXDPI
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Device XDPI: ")
+document.write(screen.deviceXDPI + "</p>")
+</script>
+</body>
+
+</html>

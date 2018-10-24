@@ -1,0 +1,17 @@
+定义和用法
+fontSmoothingEnabled 属性返回用户是否在显示控制面板中启用了字体平滑。
+
+语法
+screen.fontSmoothingEnabled
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>FontSmoothingEnabled: ")
+document.write(screen.fontSmoothingEnabled + "</p>")
+</script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+定义和用法
+width 属性声明了显示浏览器的屏幕的宽度，以像素计。
+
+语法
+screen.width
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Width: ")
+document.write(screen.width + "</p>")
+</script>
+</body>
+
+</html>

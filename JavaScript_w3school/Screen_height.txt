@@ -1,0 +1,17 @@
+定义和用法
+height 属性声明了显示浏览器的屏幕的高度，以像素计。
+
+语法
+screen.height
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Height: ")
+document.write(screen.height + "</p>")
+</script>
+</body>
+
+</html>

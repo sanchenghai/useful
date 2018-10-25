@@ -1,0 +1,17 @@
+定义和用法
+logicalXDPI 属性可返回显示屏幕每英寸的水平方向的常规点数。
+
+语法
+screen.logicalXDPI
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Logical XDPI: ")
+document.write(screen.logicalXDPI + "</p>")
+</script>
+</body>
+
+</html>

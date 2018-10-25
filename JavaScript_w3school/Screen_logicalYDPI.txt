@@ -1,0 +1,17 @@
+定义和用法
+logicalYDPI 属性可返回显示屏幕每英寸的垂直方向的常规点数。
+
+语法
+screen.logicalYDPI
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Logical YDPI: ")
+document.write(screen.logicalYDPI + "</p>")
+</script>
+</body>
+
+</html>

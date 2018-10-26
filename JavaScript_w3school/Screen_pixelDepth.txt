@@ -1,0 +1,17 @@
+定义和用法
+pixelDepth 属性返回显示屏幕的颜色分辨率（比特每像素）。
+
+语法
+screen.pixelDepth
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Pixel Depth: ")
+document.write(screen.pixelDepth + "</p>")
+</script>
+</body>
+
+</html>

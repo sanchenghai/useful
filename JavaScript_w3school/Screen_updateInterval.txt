@@ -1,0 +1,17 @@
+定义和用法
+updateInterval 属性可设置或返回屏幕的刷新率。
+
+语法
+screen.updateInterval=number
+
+实例
+<html>
+
+<body>
+<script type="text/javascript">
+document.write("<p>Update Interval: ")
+document.write(screen.updateInterval + "</p>")
+</script>
+</body>
+
+</html>

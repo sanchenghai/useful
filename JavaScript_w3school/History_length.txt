@@ -1,0 +1,19 @@
+定义和用法
+length 属性声明了浏览器历史列表中的元素数量。
+注释：IE 6 和 Opera 9 以 0 开始，而 Firefox 1.5 以 1 开始。
+
+语法
+history.length
+
+实例
+<html>
+<body>
+
+<script type="text/javascript">
+document.write(history.length);
+</script>
+
+</body>
+</html>
+输出类似：
+3

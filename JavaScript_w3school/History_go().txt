@@ -1,0 +1,26 @@
+定义和用法
+go() 方法可加载历史列表中的某个具体的页面。
+
+语法
+history.go(number|URL)
+
+说明
+URL 参数使用的是要访问的 URL，或 URL 的子串。而 number 参数使用的是要访问的 URL 在 History 的 URL 列表中的相对位置。
+
+实例
+下面例子会加载历史列表中的前一个页面：
+<html>
+<head>
+<script type="text/javascript">
+function goBack()
+  {
+  window.history.go(-1)
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Back" onclick="goBack()" />
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+定义和用法
+back() 方法可加载历史列表中的前一个 URL（如果存在）。
+调用该方法的效果等价于点击后退按钮或调用 history.go(-1)。
+
+语法
+history.back()
+
+实例
+下面的例子可在页面上创建一个后退按钮：
+<html>
+<head>
+<script type="text/javascript">
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Back" onclick="goBack()" />
+
+</body>
+</html>

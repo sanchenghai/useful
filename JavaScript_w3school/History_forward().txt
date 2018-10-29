@@ -1,0 +1,24 @@
+定义和用法
+forward() 方法可加载历史列表中的下一个 URL。
+调用该方法的效果等价于点击前进按钮或调用 history.go(1)。
+
+语法
+history.forward()
+
+实例
+下面的例子可以在页面上创建一个前进按钮：
+<html>
+<head>
+<script type="text/javascript">
+function goForward()
+  {
+  window.history.forward()
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Forward" onclick="goForward()" />
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+定义和用法
+href 属性是一个可读可写的字符串，可设置或返回当前显示的文档的完整 URL。
+因此，我们可以通过为该属性设置新的 URL，使浏览器读取并显示新的 URL 的内容。
+
+语法
+location.href=URL
+
+实例
+假设当前的 URL 是: http://example.com:1234/test.htm#part2：
+<html>
+<body>
+
+<script type="text/javascript">
+document.write(location.href);
+</script>
+
+</body>
+</html>
+输出：
+http://example.com:1234/test.htm#part2

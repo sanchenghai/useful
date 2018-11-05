@@ -1,0 +1,19 @@
+定义和用法
+search 属性是一个可读可写的字符串，可设置或返回当前 URL 的查询部分（问号 ? 之后的部分）。
+
+语法
+location.search=path_from_questionmark
+
+实例
+假设当前的 URL 是: http://www.w3school.com.cn/tiy/t.asp?f=hdom_loc_search
+<html>
+<body>
+
+<script type="text/javascript">
+document.write(location.search);
+</script>
+
+</body>
+</html>
+输出：
+?f=hdom_loc_search

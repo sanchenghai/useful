@@ -1,0 +1,23 @@
+定义和用法
+assign() 方法可加载一个新的文档。
+
+语法
+location.assign(URL)
+
+实例
+下面的例子将使用 assign() 来加载一个新的文档：
+<html>
+<head>
+<script type="text/javascript">
+function newDoc()
+  {
+  window.location.assign("http://www.w3school.com.cn")
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Load new document" onclick="newDoc()" />
+
+</body>
+</html>

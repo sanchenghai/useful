@@ -1,0 +1,26 @@
+定义和用法
+replace() 方法可用一个新文档取代当前文档。
+
+语法
+location.replace(newURL)
+
+说明
+replace() 方法不会在 History 对象中生成一个新的记录。当使用该方法时，新的 URL 将覆盖 History 对象中的当前记录。
+
+实例
+下面的例子将使用 replace() 方法来替换当前文档：
+<html>
+<head>
+<script type="text/javascript">
+function replaceDoc()
+  {
+  window.location.replace("http://www.w3school.com.cn")
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Replace document" onclick="replaceDoc()" />
+
+</body>
+</html>

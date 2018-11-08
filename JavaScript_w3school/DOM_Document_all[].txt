@@ -1,0 +1,12 @@
+定义和用法
+all 集合返回对文档中所有 HTML 元素的引用。
+
+语法
+document.all[i]
+document.all[name]
+document.all.tags[tagname]
+
+说明
+all[] 是一个多功能的类似数组的对象，它提供了对文档中所有 HTML 元素的访问。all[] 数组源自 IE 4 并且已经被很多其他的浏览器所采用。
+all[] 已经被 Document 接口的标准的 getElementById() 方法和 getElementsByTagName() 方法以及 Document 对象的 getElementsByName() 方法所取代。尽管如此，这个 all[] 数组在已有的代码中仍然使用。
+all[] 包含的元素保持了最初的顺序，如果你知道它们在数组中的确切数字化位置，可以直接从数组中提取它们。然而，更为常见的是使用 all[] 数组，根据它们的 HTML 属性 name 或 id 来访问元素。如果多个元素拥有指定的 name，将得到共享同一名称的元素的一个数组。

@@ -1,0 +1,22 @@
+定义和用法
+anchors 集合可返回对文档中所有 Anchor 对象的引用。
+
+语法
+document.anchors[]
+
+实例
+<html>
+
+<body>
+<a name="first">First anchor</a><br />
+<a name="second">Second anchor</a><br />
+<a name="third">Third anchor</a><br />
+<br />
+
+Number of anchors in this document:
+<script type="text/javascript">
+document.write(document.anchors.length)
+</script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+定义和用法
+forms 集合可返回对文档中所有 Form 对象的引用。
+
+语法
+document.forms[]
+
+实例
+<html>
+<body>
+
+<form name="Form1"></form>
+<form name="Form2"></form>
+<form name="Form3"></form>
+
+<script type="text/javascript">
+document.write("This document contains: ")
+document.write(document.forms.length + " forms.")
+</script>
+
+</body>
+</html>

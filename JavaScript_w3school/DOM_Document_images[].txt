@@ -1,0 +1,25 @@
+定义和用法
+images 集合可返回对文档中所有 Image 对象的引用。
+
+语法
+document.images[]
+
+提示和注释
+注释：为了与 0 级 DOM 兼容，该集合不包括由 <object> 标记定义的图像。
+
+实例
+<html>
+
+<body>
+<img border="0" src="hackanm.gif" width="48" height="48">
+<br />
+<img border="0" src="compman.gif" width="107" height="98">
+<br /><br />
+
+<script type="text/javascript">
+document.write("This document contains: ")
+document.write(document.images.length + " images.")
+</script>
+</body>
+
+</html>

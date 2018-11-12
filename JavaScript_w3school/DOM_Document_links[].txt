@@ -1,0 +1,29 @@
+定义和用法
+links 集合可返回对文档中所有 Area 和 Link 对象的引用。
+
+语法
+document.links[]
+
+实例
+<html>
+<body>
+
+<img src="planets.gif"
+width="145" height="126"
+usemap="#planetmap" />
+
+<map name="planetmap">
+<area id="venus" shape="circle"
+coords="124,58,8"
+alt="Venus"
+href="venus.htm" />
+</map>
+<br />
+
+Number of links in this document:
+<script type="text/javascript">
+document.write(document.links.length)
+</script>
+
+</body>
+</html>

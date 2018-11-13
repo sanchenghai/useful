@@ -1,0 +1,23 @@
+定义和用法
+cookie 属性可设置或查询与当前文档相关的所有 cookie。
+
+语法
+document.cookie
+
+说明
+该属性是一个可读可写的字符串，可使用该属性对当前文档的 cookie 进行读取、创建、修改和删除操作。
+
+提示和注释
+提示：该属性的行为与普通的读/写属性是不同的。
+
+实例
+<html>
+<body>
+
+The cookies associated with this document is:
+<script type="text/javascript">
+document.write(document.cookie)
+</script>
+
+</body>
+</html>

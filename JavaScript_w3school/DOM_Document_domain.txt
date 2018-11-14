@@ -1,0 +1,24 @@
+定义和用法
+domain 属性可返回下载当前文档的服务器域名。
+
+语法
+document.domain
+
+说明
+该属性是一个只读的字符串，包含了载入当前文档的 web 服务器的主机名。
+
+提示和注释
+提示：domain 属性可以解决因同源安全策略带来的不同文档的属性共享问题。
+点击这里，了解同源安全策略的详细信息。
+
+实例
+<html>
+<body>
+
+The domain name for this document is:
+<script type="text/javascript">
+document.write(document.domain)
+</script>
+
+</body>
+</html>

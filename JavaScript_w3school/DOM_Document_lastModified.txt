@@ -1,0 +1,20 @@
+定义和用法
+lastModified 属性可返回文档最后被修改的日期和时间。
+
+语法
+document.lastModified
+
+说明
+该值来自于 Last-Modified HTTP 头部，它是由 Web 服务器发送的可选项。
+
+实例
+<html>
+<body>
+
+This document was last modified on:
+<script type="text/javascript">
+document.write(document.lastModified)
+</script>
+
+</body>
+</html>

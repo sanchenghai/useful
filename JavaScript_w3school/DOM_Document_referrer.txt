@@ -1,0 +1,20 @@
+定义和用法
+referrer 属性可返回载入当前文档的文档的 URL。
+
+语法
+document.referrer
+
+说明
+如果当前文档不是通过超级链接访问的，则为 null。这个属性允许客户端 JavaScript 访问 HTTP 引用头部。
+
+实例
+<html>
+<body>
+
+The referrer of this document is:
+<script type="text/javascript">
+document.write(document.referrer)
+</script>
+
+</body>
+</html>

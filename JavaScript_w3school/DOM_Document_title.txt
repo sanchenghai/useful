@@ -1,0 +1,23 @@
+HTML DOM title 属性
+HTML DOM Document 对象
+
+定义和用法
+title 属性可返回当前文档的标题（ HTML title 元素中的文本）。
+
+语法
+document.title
+
+实例
+<html>
+<head>
+<title>My title</title>
+</head>
+
+<body>
+The title of the document is:
+<script type="text/javascript">
+document.write(document.title)
+</script>
+</body>
+
+</html>

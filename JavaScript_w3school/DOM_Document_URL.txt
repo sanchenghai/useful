@@ -1,0 +1,20 @@
+定义和用法
+URL 属性可返回当前文档的 URL。
+
+语法
+document.URL
+
+说明
+一般情况下，该属性的值与包含文档的 Window 的 location.href 属性相同。不过，在 URL 重定向发生的时候，这个 URL 属性保存了文档的实际 URL，而 location.href 保存了请求的 URL。
+
+实例
+<html>
+
+<body>
+The URL of this document is:
+<script type="text/javascript">
+document.write(document.URL)
+</script>
+</body>
+
+</html>

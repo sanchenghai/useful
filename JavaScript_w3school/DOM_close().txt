@@ -1,0 +1,30 @@
+定义和用法
+close() 方法可关闭一个由 document.open 方法打开的输出流，并显示选定的数据。
+
+语法
+document.close()
+
+说明
+该方法将关闭 open() 方法打开的文档流，并强制地显示出所有缓存的输出内容。如果您使用 write() 方法动态地输出一个文档，必须记住当你这么做的时候要调用 close() 方法，以确保所有文档内容都能显示。
+一旦调用了 close()，就不应该再次调用 write()，因为这会隐式地调用 open() 来擦除当前文档并开始一个新的文档。
+
+实例
+<html>
+<head>
+<script type="text/javascript">
+function createNewDoc()
+  {
+  var newDoc=document.open("text/html","replace");
+  var txt="<html><body>Learning about the DOM is FUN!</body></html>";
+  newDoc.write(txt);
+  newDoc.close();
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Write to a new document"
+onclick="createNewDoc()">
+
+</body>
+</html>

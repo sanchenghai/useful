@@ -1,0 +1,30 @@
+定义和用法
+getElementsByName() 方法可返回带有指定名称的对象的集合。
+
+语法
+document.getElementsByName(name)
+该方法与 getElementById() 方法相似，但是它查询元素的 name 属性，而不是 id 属性。
+另外，因为一个文档中的 name 属性可能不唯一（如 HTML 表单中的单选按钮通常具有相同的 name 属性），所有 getElementsByName() 方法返回的是元素的数组，而不是一个元素。
+
+实例
+<html>
+<head>
+<script type="text/javascript">
+function getElements()
+  {
+  var x=document.getElementsByName("myInput");
+  alert(x.length);
+  }
+</script>
+</head>
+<body>
+
+<input name="myInput" type="text" size="20" /><br />
+<input name="myInput" type="text" size="20" /><br />
+<input name="myInput" type="text" size="20" /><br />
+<br />
+<input type="button" onclick="getElements()"
+value="How many elements named 'myInput'?" />
+
+</body>
+</html>

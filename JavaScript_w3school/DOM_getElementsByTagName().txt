@@ -1,0 +1,44 @@
+定义和用法
+getElementsByTagName() 方法可返回带有指定标签名的对象的集合。
+
+语法
+document.getElementsByTagName(tagname)
+
+说明
+getElementsByTagName() 方法返回元素的顺序是它们在文档中的顺序。
+如果把特殊字符串 "*" 传递给 getElementsByTagName() 方法，它将返回文档中所有元素的列表，元素排列的顺序就是它们在文档中的顺序。
+
+提示和注释
+注释：传递给 getElementsByTagName() 方法的字符串可以不区分大小写。
+
+实例
+例子 1
+<html>
+<head>
+<script type="text/javascript">
+function getElements()
+  {
+  var x=document.getElementsByTagName("input");
+  alert(x.length);
+  }
+</script>
+</head>
+<body>
+
+<input name="myInput" type="text" size="20" /><br />
+<input name="myInput" type="text" size="20" /><br />
+<input name="myInput" type="text" size="20" /><br />
+<br />
+<input type="button" onclick="getElements()"
+value="How many input elements?" />
+
+</body>
+</html>
+例子 2
+可以用 getElementsByTagName() 方法获取任何类型的 HTML 元素的列表。例如，下面的代码可获取文档中所有的表：
+var tables = document.getElementsByTagName("table");
+alert ("This document contains " + tables.length + " tables");
+例子 3
+如果您非常了解文档的结构，也可以使用 getElementsByTagName() 方法获取文档中的一个特定的元素。例如，下面的代码可以获得文档中的第四个段落：
+var myParagragh = document.getElementsByTagName("p")[3];
+不过，我们还是认为，如果您需要操作某个特定的元素，使用 getElementById() 方法将更为有效。

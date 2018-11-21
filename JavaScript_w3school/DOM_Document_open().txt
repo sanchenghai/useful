@@ -1,0 +1,37 @@
+定义和用法
+open() 方法可打开一个新文档，并擦除当前文档的内容。
+
+语法
+document.open(mimetype,replace)
+
+参数	描述
+mimetype	可选。规定正在写的文档的类型。默认值是 "text/html"。
+replace	可选。当此参数设置后，可引起新文档从父文档继承历史条目。
+
+说明
+该方法将擦除当前 HTML 文档的内容，开始一个新的文档，新文档用 write() 方法或 writeln() 方法编写。
+
+提示和注释
+重要事项：调用 open() 方法打开一个新文档并且用 write() 方法设置文档内容后，必须记住用 close 方法关闭文档，并迫使其内容显示出来。
+注释：属于被覆盖的文档的一部分的脚本或事件句柄不能调用该方法，因为脚本或事件句柄自身也会被覆盖。
+
+实例
+<html>
+<head>
+<script type="text/javascript">
+function createNewDoc()
+  {
+  var newDoc=document.open("text/html","replace");
+  var txt="<html><body>Learning about the DOM is FUN!</body></html>";
+  newDoc.write(txt);
+  newDoc.close();
+  }
+</script>
+</head>
+<body>
+
+<input type="button" value="Write to a new document"
+onclick="createNewDoc()">
+
+</body>
+</html>

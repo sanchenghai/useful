@@ -1,0 +1,19 @@
+定义和用法
+writeln() 方法与 write() 方法作用相同，外加可在每个表达式后写一个换行符。
+
+语法
+document.writeln(exp1,exp2,exp3,....)
+
+提示和注释
+提示：在编写 <pre> 标记的内容时，该方法很有用。
+
+实例
+<html>
+<body>
+
+<script type="text/javascript">
+document.writeln("Hello World!");
+</script>
+
+</body>
+</html>

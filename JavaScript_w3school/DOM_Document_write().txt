@@ -1,0 +1,21 @@
+定义和用法
+write() 方法可向文档写入 HTML 表达式或 JavaScript 代码。
+可列出多个参数(exp1,exp2,exp3,...) ，它们将按顺序被追加到文档中。
+
+语法
+document.write(exp1,exp2,exp3,....)
+
+说明
+虽然根据 DOM 标准，该方法只接受单个字符串作为参数。不过根据经验，write() 可接受任何多个参数。
+我们通常按照两种的方式使用 write() 方法：一是在使用该方在文档中输出 HTML，另一种是在调用该方法的的窗口之外的窗口、框架中产生新文档。在第二种情况中，请务必使用 close() 方法来关闭文档。
+
+实例
+<html>
+<body>
+
+<script type="text/javascript">
+document.write("Hello World!");
+</script>
+
+</body>
+</html>

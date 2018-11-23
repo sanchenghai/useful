@@ -1,0 +1,45 @@
+定义和用法
+accessKey 属性设置或返回元素的快捷键。
+快捷键规定激活元素或使元素获得焦点的快捷键。
+注释：在不同的浏览器中访问快捷键的方式各有不同：
+
+浏览器	Windows	Linux	Mac
+Internet Explorer	[Alt] + accesskey	N/A
+Chrome	[Alt] + accesskey	[Alt] + accesskey	[Control] [Alt] + accesskey
+Firefox	[Alt] [Shift] + accesskey	[Alt] [Shift] + accesskey	[Control] [Alt] + accesskey
+Safari	[Alt] + accesskey	N/A	[Control] [Alt] + accesskey
+Opera
+Opera 15 或更新的版本：[Alt] + accesskey
+Opera 12.1 或更老的版本：[Shift] [Esc] + accesskey
+不过在大多数浏览器中，可以将快捷键设置为其他组合。
+
+提示：如果超过一个元素拥有相同的快捷键，那么：
+IE, Firefox: 激活下一个被按下快捷键的元素
+Chrome, Safari: 激活最后一个被按下快捷键的元素
+Opera: 激活第一个被按下快捷键的元素
+
+语法
+HTMLElementObject.accessKey=accessKey
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 accessKey 属性。
+
+实例
+设置链接的快捷键：
+<html>
+ <head>
+ <script>
+ function accesskey()
+   {
+   document.getElementById('w3s').accessKey="w"
+   }
+ </script>
+ </head>
+
+ <body onload="accesskey()">
+
+ <a id="w3s" href="http://www.w3school.com.cn/">W3School</a>
+
+ </body>
+</html>

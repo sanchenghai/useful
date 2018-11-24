@@ -1,0 +1,50 @@
+实例
+在列表中添加项目：
+document.getElementById("myList").appendChild(newListItem);
+添加之前：
+Coffee
+Tea
+添加之后：
+Coffee
+Tea
+Water
+亲自试一试
+
+定义和用法
+appendChild() 方法向节点添加最后一个子节点。
+提示：如果您需要创建包含文本的新段落，请记得添加到段落的文本的文本节点，然后向文档添加该段落。
+您也可以使用 appendChild() 方法从一个元素向另一个元素中移动元素。
+
+实例
+从一个列表向另一个列表中移动列表项：
+var node=document.getElementById("myList2").lastChild;
+document.getElementById("myList1").appendChild(node);
+添加之前：
+Coffee
+Tea
+Water
+Milk
+添加之前：
+Coffee
+Tea
+Milk
+Water
+亲自试一试
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 appendChild() 方法。
+
+语法
+node.appendChild(node)
+
+参数
+参数	类型	描述
+node	Node 对象。	必需的。您希望添加的节点对象。
+
+返回值
+类型	描述
+Node 对象	被添加的节点。
+
+技术细节
+DOM 版本	Core Level 1 Node Object

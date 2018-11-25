@@ -1,0 +1,20 @@
+实例
+获得元素属性的集合：
+document.getElementsByTagName("BUTTON")[0].attributes;
+亲自试一试
+
+定义和用法
+attributes 属性返回指定节点的属性集合，即 NamedNodeMap。
+提示：您可以使用 length 属性来确定属性的数量，然后您就能够遍历所有的属性节点并提取您需要的信息。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 attributes 属性。
+注释：在 Internet Explorer 8 以及更早的版本中，attributes 属性会返回元素所有可能属性的集合。
+
+语法
+node.attributes
+
+技术细节
+返回值：	NamedNodeMap 对象，表示属性的集合。
+DOM 版本	Core Level 1 Node Object

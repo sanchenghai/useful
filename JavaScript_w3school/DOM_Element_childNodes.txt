@@ -1,0 +1,19 @@
+实例
+获得 body 元素的子节点集合：
+document.body.childNodes;
+亲自试一试
+
+定义和用法
+childNodes 属性返回节点的子节点集合，以 NodeList 对象。
+提示：您可以使用 length 属性来确定子节点的数量，然后您就能够遍历所有的子节点并提取您需要的信息。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 childNodes 属性。
+
+语法
+element.childNodes
+
+技术细节
+返回值：	NodeList 对象，表示节点集合。
+DOM 版本	Core Level 1

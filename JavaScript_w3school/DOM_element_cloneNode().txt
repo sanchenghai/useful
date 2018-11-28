@@ -1,0 +1,42 @@
+实例
+把一个列表项从一个列表复制到另一个：
+var node=document.getElementById("myList2").lastChild.cloneNode(true);
+document.getElementById("myList1").appendChild(node);
+克隆之前：
+Coffee
+Tea
+Water
+Milk
+克隆之后：
+Coffee
+Tea
+Milk
+Water
+Milk
+亲自试一试
+
+定义和用法
+cloneNode() 方法创建节点的拷贝，并返回该副本。
+cloneNode() 方法克隆所有属性以及它们的值。
+如果您需要克隆所有后代，请把 deep 参数设置 true，否则设置为 false。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 cloneNode() 方法。
+
+语法
+node.cloneNode(deep)
+
+参数
+参数	类型	描述
+deep	Boolean
+可选。默认是 false。
+设置为 true，如果您需要克隆节点及其属性，以及后代
+设置为 false，如果您只需要克隆节点及其后代
+
+返回值
+类型	描述
+Node 对象	被克隆节点。
+
+技术细节
+DOM 版本	Core Level 1 Node Object

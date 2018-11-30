@@ -1,0 +1,47 @@
+实例
+把 <p> 元素的内容设置为可编辑：
+document.getElementById("myP").contentEditable = true;
+亲自试一试
+
+定义和用法
+contentEditable 属性设置或返回元素内容是否可编辑。
+提示：您也可以使用 isContentEditable 属性来查明元素内容是否可编辑。
+
+语法
+返回 contentEditable 属性：
+HTMLElementObject.contentEditable
+设置 contentEditable 属性：
+HTMLElementObject.contentEditable=true|false
+
+属性值
+值	描述
+true|false
+规定元素的内容是否可编辑。
+可能的值：
+inherit - 默认。如果父元素可编辑，则元素内容可编辑。
+true - 内容可编辑。
+false - 内容不可编辑。
+
+技术细节
+返回值：	逻辑值，如果元素可编辑则返回 true，否则返回 false。
+
+浏览器支持
+
+更多实例
+例子 1
+查明 <p> 元素是否可编辑：
+var x = document.getElementById("myP").contentEditable;
+x 的结果是：
+true
+亲自试一试
+例子 2
+对是否能够对 <p> 元素的内容进行编辑进行切换：
+var x = document.getElementById("myP");
+if (x.contentEditable == "true") {
+    x.contentEditable = "false";
+    button.innerHTML = "Enable content of p to be editable!";
+} else {
+    x.contentEditable = "true";
+    button.innerHTML = "Disable content of p to be editable!";
+}
+亲自试一试

@@ -1,0 +1,19 @@
+实例
+返回文档的首个子节点：
+document.firstChild;
+亲自试一试
+
+定义和用法
+firstChild 属性返回指定节点的首个子节点，以 Node 对象。
+注释：在 HTML 中，文本本身是 HTML 元素的父节点，HEAD 和 BODY 是 HTML 元素的子节点。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 firstChild 属性。
+
+语法
+node.firstChild
+
+技术细节
+返回值：	Node 对象，节点的子节点。
+DOM 版本	Core Level 1 Node Object

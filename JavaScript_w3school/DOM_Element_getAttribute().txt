@@ -1,0 +1,28 @@
+实例
+获得链接的 target 属性：
+document.getElementsByTagName("a")[0].getAttribute("target");
+结果：
+_blank
+亲自试一试
+
+定义和用法
+getAttribute() 方法返回指定属性名的属性值。
+提示：如果您希望以 Attr 对象返回属性，请使用 getAttributeNode。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 getAttribute() 方法。
+
+语法
+element.getAttribute(attributename)
+
+参数
+参数	类型	描述
+attributename	字符串值。	必需。需要获得属性值的属性名称。
+
+返回值
+类型	描述
+String	指定属性的值。
+
+技术细节
+DOM 版本	Core Level 1 Element Object

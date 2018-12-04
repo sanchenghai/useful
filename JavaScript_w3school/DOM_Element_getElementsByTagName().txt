@@ -1,0 +1,33 @@
+实例
+改变列表中第一个列表项的文本：
+var list=document.getElementsByTagName("UL")[0]
+list.getElementsByTagName("LI")[0].innerHTML="Milk";
+改变文本之前：
+Coffee
+Tea
+改变文本之后：
+Milk
+Tea
+亲自试一试
+
+定义和用法
+getElementsByTagName() 方法返回具有指定标签名的元素子元素集合，以 NodeList 对象。
+提示：参数值 "*" 返回元素的所有子元素。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 getElementsByTagName() 方法。
+
+语法
+element.getElementsByTagName(tagname)
+
+参数
+参数	类型	描述
+tagname	字符串。	必需。需要获得的子元素的标签名。
+
+返回值
+类型	描述
+NodeList	对象。具有指定标签名的元素子元素集合。
+
+技术细节
+DOM 版本	Core Level 1 Element Object

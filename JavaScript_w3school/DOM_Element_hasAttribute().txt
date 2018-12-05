@@ -1,0 +1,28 @@
+实例
+检查 button 元素是否有 onclick 属性：
+document.getElementsByTagName("BUTTON")[0].hasAttribute("onclick");
+结果：
+true
+亲自试一试
+
+定义和用法
+如果存在指定属性，则 hasAttribute() 方法返回 true，否则返回 false。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 hasAttribute() 方法。
+注释：Internet Explorer 8 以及更早的版本不支持该方法。
+
+语法
+element.hasAttribute(attributename)
+
+参数
+参数	类型	描述
+attributename	字符串值。	必需。需要检查是否存在的属性名称。
+
+返回值
+类型	描述
+Boolean	如果存在该属性，则返回 true，否则返回 false。
+
+技术细节
+DOM 版本	Core Level 2 Element Object

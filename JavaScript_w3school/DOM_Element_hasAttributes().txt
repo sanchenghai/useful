@@ -1,0 +1,28 @@
+实例
+检查 body 元素是否有属性：
+document.body.hasAttributes()
+结果：
+false
+亲自试一试
+
+定义和用法
+如果指定节点拥有属性，则 hasAttributes() 方法返回 true，否则返回 false。
+如果指定节点不是元素节点，则返回值始终是 false。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 hasAttributes() 方法。
+注释：Internet Explorer 8 以及更早的版本不支持该方法。
+
+语法
+node.hasAttributes()
+
+参数
+无
+
+返回值
+类型	描述
+Boolean	如果节点有属性，则返回 true，否则返回 false。
+
+技术细节
+DOM 版本	Core Level 2 Node Object

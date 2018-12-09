@@ -1,0 +1,26 @@
+定义和用法
+id 属性设置或返回元素的 id。
+
+语法
+HTMLElementObject.id=id
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有浏览器都支持 id 属性。
+
+实例
+输出链接的 id：
+<html>
+ <body>
+
+ <p><a id="myAnchor"
+ href="http://www.w3school.com.cn">Visit W3School.com.cn</a></p>
+
+ <script>
+ var x=document.getElementById("myAnchor");
+ document.write(x.id);
+ </script>
+
+ </body>
+</html>
+亲自试一试

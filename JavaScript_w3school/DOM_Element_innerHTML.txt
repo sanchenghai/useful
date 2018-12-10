@@ -1,0 +1,31 @@
+定义和用法
+innerHTML 属性设置或返回元素的 inner HTML。
+
+语法
+HTMLElementObject.innerHTML=text
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 innerHTML 属性。
+
+实例
+改变链接的文本、URL 和 target：
+<html>
+ <head>
+ <script>
+ function changeLink()
+ {
+ document.getElementById('myAnchor').innerHTML="W3Schools";
+ document.getElementById('myAnchor').href="http://www.w3schools.com";
+ document.getElementById('myAnchor').target="_blank";
+ }
+ </script>
+ </head>
+ <body>
+
+ <a id="myAnchor" href="http://www.microsoft.com">Microsoft</a>
+ <input type="button" onclick="changeLink()" value="Change link">
+
+ </body>
+</html>
+亲自试一试

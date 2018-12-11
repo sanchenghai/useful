@@ -1,0 +1,52 @@
+实例
+向列表中插入一个项目：
+document.getElementById("myList").insertBefore(newItem,existingItem);
+插入之前：
+Coffee
+Tea
+插入之后：
+Water
+Coffee
+Tea
+亲自试一试
+
+定义和用法
+insertBefore() 方法在您指定的已有子节点之前插入新的子节点。
+提示：如果您希望创建包含文本的新列表项，请记得创建文本节点形式的文本，以便追加到 LI 元素中，然后向列表插入这个 LI。
+您也可以使用 insertBefore 方法插入/移动已有元素。
+
+实例
+把一个列表项从一个列表移动到另一个中：
+var node=document.getElementById("myList2").lastChild;
+var list=document.getElementById("myList1");
+list.insertBefore(node,list.childNodes[0]);
+插入之前：
+Coffee
+Tea
+Water
+Milk
+插入之后：
+Milk
+Coffee
+Tea
+Water
+亲自试一试
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 insertBefore() 方法。
+
+语法
+node.insertBefore(newnode,existingnode)
+
+参数
+参数	类型	描述
+newnode	Node 对象	必需。需要插入的节点对象。
+existingnode	Node object	可选。在其之前插入新节点的子节点。如果未规定，则 insertBefore 方法会在结尾插入 newnode。
+
+返回值
+类型	描述
+Node 对象。	您插入的节点。
+
+技术细节
+DOM 版本	Core Level 1 Node Object

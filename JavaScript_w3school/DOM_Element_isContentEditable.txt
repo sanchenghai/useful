@@ -1,0 +1,22 @@
+实例
+查明 <p> 元素是否可编辑：
+var x = document.getElementById("myP").isContentEditable;
+x 的结果是：
+true
+亲自试一试
+
+定义和用法
+isContentEditable 属性返回元素的内容是否可编辑。
+该属性为只读。
+提示：请使用 contentEditable 属性来改变元素的可编辑状态。
+
+语法
+HTMLElementObject.isContentEditable
+
+技术细节
+返回值：	逻辑值，如果元素内容可编辑，则返回 true，否则返回 false。
+
+浏览器支持
+
+相关页面
+HTML 参考手册：HTML contenteditable 属性

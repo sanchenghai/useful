@@ -1,0 +1,28 @@
+实例
+检查被定义的命名空间是否是默认命名空间：
+document.documentElement.isDefaultNamespace('http://www.w3.org/1999/xhtml');
+结果：
+true
+亲自试一试
+
+定义和用法
+isDefaultNamespace() 方法返回 true，如果指定的命名空间是默认的，否则返回 false。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 isDefaultNamespace() 方法。
+注释：Internet Explorer 8 以及更早的版本不支持该方法。
+
+语法
+node.isDefaultNamespace(namespaceURI)
+
+参数
+参数	类型	描述
+namespace	URI String	必需。需要检查的命名空间的 URI。
+
+返回值
+类型	描述
+Boolean	如果命名空间为默认，则返回 true，否则返回 false。
+
+技术细节
+DOM 版本	Core Level 3 Node Object

@@ -1,0 +1,36 @@
+实例
+检查两个不同列表中的列表项是否是相等的：
+var item1=document.getElementById("myList1").firstChild;
+var item2=document.getElementById("myList2").firstChild;
+item1.isEqualNode(item2);
+结果：
+false
+亲自试一试
+
+定义和用法
+isEqualNode() 方法检查两个节点是否相等。
+如果下例条件为 true，则两个节点相等：
+节点类型相同
+拥有相同的 nodeName、NodeValue、localName、nameSpaceURI 以及前缀
+所有后代均为相同的子节点
+拥有相同的属性和属性值（属性次序不必一致）
+提示：请使用 isSameNode() 方法来检测两节点是否是相同节点。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 isEqualNode() 方法。
+注释：Internet Explorer 8 以及更早的版本不支持该方法。
+
+语法
+node.isEqualNode(node)
+
+参数
+参数	类型	描述
+node	Node object	必需。希望与指定节点比较的节点。
+
+返回值
+类型	描述
+Boolean	如果两节点相等，则返回 true，否则返回 false。
+
+技术细节
+DOM 版本	Core Level 3 Node Object

@@ -1,0 +1,30 @@
+实例
+检测 buttom 元素是否支持特性 Core，版本 2.0：
+var item=document.getElementsByTagName("BUTTON")[0];
+item.isSupported("Core","2.0");
+结果：
+true
+亲自试一试
+
+定义和用法
+isSupported() 方法检测指定节点是否支持指定特性。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 isSupported() 方法。
+注释：Internet Explorer 8 以及更早的版本不支持该方法。
+
+语法
+node.isSupported(feature,version)
+
+参数
+参数	类型	描述
+feature	String	必需。定义需要检查是否得到支持的特性。
+version	String	可选。定义需要检查是否得到支持的特性版本。
+
+返回值
+类型	描述
+Boolean	如果特性得到支持则返回 true，否则返回 false。
+
+技术细节
+DOM 版本	Core Level 2 Node Object

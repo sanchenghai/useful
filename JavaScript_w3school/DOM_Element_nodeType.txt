@@ -1,0 +1,70 @@
+实例
+获得 body 元素的节点类型：
+document.body.nodeType;
+结果：
+1
+亲自试一试
+
+定义和用法
+nodeType 属性返回以数字值返回指定节点的节点类型。
+如果节点是元素节点，则 nodeType 属性将返回 1。
+如果节点是属性节点，则 nodeType 属性将返回 2。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 nodeType 属性。
+
+语法
+node.nodeType
+
+技术细节
+返回值：	字符串值，代表节点的节点类型。
+DOM 版本	Core Level 1 Node Object
+
+Node Types
+文档、元素、属性以及 HTML 或 XML 文档的其他方面拥有不同的节点类型。
+存在 12 种不同的节点类型，其中可能会有不同节点类型的子节点：
+节点类型	描述	子节点
+1	Element	代表元素	Element, Text, Comment, ProcessingInstruction, CDATASection, EntityReference
+2	Attr	代表属性	Text, EntityReference
+3	Text	代表元素或属性中的文本内容。	None
+4	CDATASection	代表文档中的 CDATA 部分（不会由解析器解析的文本）。	None
+5	EntityReference	代表实体引用。	Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference
+6	Entity	代表实体。	Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference
+7	ProcessingInstruction	代表处理指令。	None
+8	Comment	代表注释。	None
+9	Document	代表整个文档（DOM 树的根节点）。	Element, ProcessingInstruction, Comment, DocumentType
+10	DocumentType	向为文档定义的实体提供接口	None
+11	DocumentFragment	代表轻量级的 Document 对象，能够容纳文档的某个部分	Element, ProcessingInstruction, Comment, Text, CDATASection, EntityReference
+12	Notation	代表 DTD 中声明的符号。	None
+
+节点类型 - 返回值
+对于每种节点类型，nodeName 和 nodeValue 属性的返回值：
+节点类型	nodeName 返回	nodeValue 返回
+1	Element	元素名	null
+2	Attr	属性名称	属性值
+3	Text	#text	节点的内容
+4	CDATASection	#cdata-section	节点的内容
+5	EntityReference	实体引用名称	null
+6	Entity	实体名称	null
+7	ProcessingInstruction	target	节点的内容
+8	Comment	#comment	注释文本
+9	Document	#document	null
+10	DocumentType	文档类型名称	null
+11	DocumentFragment	#document 片段	null
+12	Notation	符号名称	null
+
+NodeTypes - Named Constants
+NodeType	Named Constant
+1	ELEMENT_NODE
+2	ATTRIBUTE_NODE
+3	TEXT_NODE
+4	CDATA_SECTION_NODE
+5	ENTITY_REFERENCE_NODE
+6	ENTITY_NODE
+7	PROCESSING_INSTRUCTION_NODE
+8	COMMENT_NODE
+9	DOCUMENT_NODE
+10	DOCUMENT_TYPE_NODE
+11	DOCUMENT_FRAGMENT_NODE
+12	NOTATION_NODE

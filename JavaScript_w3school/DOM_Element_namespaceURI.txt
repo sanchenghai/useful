@@ -1,0 +1,22 @@
+实例
+获得一个 XHTML 文档的命名空间的 URI：
+document.documentElement.namespaceURI;
+结果：
+http://www.w3.org/1999/xhtml
+亲自试一试
+
+定义和用法
+namespaceURI 属性返回指定节点的命名空间的 URI。
+注释：元素节点继承其父节点的命名空间，因此，XHTML 文档中的所有元素都拥有 namespaceURI "http://www.w3.org/1999/xhtml"。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 namespaceURI 属性。
+注释：Internet Explorer 8 以及更早的版本不支持该属性。
+
+语法
+node.namespaceURI
+
+技术细节
+返回值：	字符串值，表示节点命名空间的 URI。
+DOM 版本	Core Level 2 Node Object

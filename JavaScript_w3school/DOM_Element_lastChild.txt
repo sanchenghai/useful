@@ -1,0 +1,18 @@
+实例
+返回列表中的最后一个子节点：
+document.getElementById("myList").lastChild;
+亲自试一试
+
+定义和用法
+lastChild 属性返回指定节点的最后一个子节点，以 Node 对象。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 lastChild 属性。
+
+语法
+node.lastChild
+
+技术细节
+返回值：	Node 对象，节点的最后一个子节点。
+DOM 版本	Core Level 1 Node Object

@@ -1,0 +1,23 @@
+实例
+对元素进行正规化：
+xmlDoc.getElementById("demo").normalize();
+亲自试一试
+
+定义和用法
+normalize() 方法移除空的文本节点，并连接相邻的文本节点。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 normalize() 方法。
+
+语法
+node.normalize()
+
+参数
+无
+
+返回值
+无返回值
+
+技术细节
+DOM 版本	Core Level 2 Node Object

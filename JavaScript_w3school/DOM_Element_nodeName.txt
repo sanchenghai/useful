@@ -1,0 +1,23 @@
+实例
+获得 body 元素的节点名称：
+document.body.nodeName;
+结果：
+BODY
+亲自试一试
+
+定义和用法
+nodeName 属性指定节点的节点名称。
+如果节点是元素节点，则 nodeName 属性返回标签名。
+如果节点是属性节点，则 nodeName 属性返回属性的名称。
+对于其他节点类型，nodeName 属性返回不同节点类型的不同名称。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 nodeName 属性。
+
+语法
+node.nodeName
+
+技术细节
+返回值：	字符串值，代表节点的名称。
+DOM 版本	Core Level 1 Node Object

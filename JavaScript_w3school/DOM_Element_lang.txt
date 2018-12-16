@@ -1,0 +1,28 @@
+定义和用法
+lang 属性设置或返回元素的语言代码。
+
+语法
+HTMLElementObject.lang=language-code
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 lang 属性。
+
+实例
+返回 body 元素的语言代码：
+<html>
+ <body id="myid" lang="en-us">
+
+ <script>
+ var x=document.getElementsByTagName('body')[0];
+ document.write("Body language: " + x.lang);
+ document.write("<br>");
+ document.write("An alternate way: ");
+ document.write(document.getElementById('myid').lang);
+ </script>
+
+ </body>
+</html>
+输出：
+Body language: en-us
+An alternate way: en-us

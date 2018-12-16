@@ -1,0 +1,25 @@
+实例
+获得第一个 button 元素的节点值：
+document.getElementsByTagName("BUTTON")[0].childNodes[0].nodeValue;
+结果：
+Try it yourself
+亲自试一试
+
+定义和用法
+nodeValue 属性设置或返回指定节点的节点值。
+注释：如果您希望返回元素的文本，请记住文本始终位于文本节点中，并且您必须返回文本节点的值（element.childNodes[0].nodeValue）。
+提示：nodeValue 属性的替代选择是 textContent 属性。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 nodeValue 属性。
+
+语法
+设置节点值：
+node.nodeValue=value
+返回节点值：
+node.nodeValue
+
+技术细节
+返回值：	字符串值，代表节点的值。
+DOM 版本	Core Level 1 Node Object

@@ -1,0 +1,20 @@
+实例
+返回列表项的下一个同胞：
+document.getElementById("item1").nextSibling;
+亲自试一试
+
+定义和用法
+nextSibling 属性返回指定节点之后紧跟的节点，在相同的树层级中。
+被返回的节点以 Node 对象返回。
+注释：如果没有 nextSibling 节点，则返回值为 null。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 nextSibling 属性。
+
+语法
+node.nextSibling
+
+技术细节
+返回值：	Node 对象。节点的下一个同胞。
+DOM 版本	Core Level 1 Node Object

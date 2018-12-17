@@ -1,0 +1,19 @@
+实例
+返回 <li> 元素的 parentNode（父节点）：
+document.getElementById("item1").parentNode;
+亲自试一试
+
+定义和用法
+parentNode 属性以 Node 对象的形式返回指定节点的父节点。
+如果指定节点没有父节点，则返回 null。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 parentNode 属性。
+
+语法
+node.parentNode
+
+技术细节
+返回值：	Node 对象，节点的父节点。
+DOM 版本	Core Level 1 Node Object

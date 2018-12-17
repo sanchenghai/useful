@@ -1,0 +1,20 @@
+实例
+返回元素的 ownerDocument：
+document.getElementById("demo").ownerDocument;
+亲自试一试
+
+定义和用法
+ownerDocument 属性以 Document 对象的形式返回节点的 owner document。
+在 HTML 中，HTML 文档本身始终是元素的 ownerDocument。
+请在我们的文档对象参考手册中浏览更多有关 Document 对象的内容。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 ownerDocument 属性。
+
+语法
+node.ownerDocument
+
+技术细节
+返回值：	Document 对象，节点的 owner document。
+DOM 版本	Core Level 2 Node Object

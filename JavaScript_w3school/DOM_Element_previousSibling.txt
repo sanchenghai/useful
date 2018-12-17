@@ -1,0 +1,20 @@
+实例
+返回列表项的 previousSibling（前一个同胞节点）：
+document.getElementById("item2").previousSibling;
+亲自试一试
+
+定义和用法
+previousSibling 属性返回同一树层级中指定节点的前一个节点。
+被返回的节点以 Node 对象的形式返回。
+注释：如果没有 previousSibling 节点，则返回值是 null。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 previousSibling 属性。
+
+语法
+node.previousSibling
+
+技术细节
+返回值：	Node 对象，节点的前一个同胞节点。
+DOM 版本	Core Level 1 Node Object

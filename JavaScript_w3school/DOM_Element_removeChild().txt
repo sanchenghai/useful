@@ -1,0 +1,34 @@
+实例
+从列表中删除一个项目：
+var list=document.getElementById("myList");
+list.removeChild(list.childNodes[0]);
+删除之前：
+Coffee
+Tea
+Milk
+删除之后：
+Tea
+Milk
+亲自试一试
+
+定义和用法
+removeChild() 方法指定元素的某个指定的子节点。
+以 Node 对象返回被删除的节点，如果节点不存在则返回 null。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 removeChild() 方法。
+
+语法
+node.removeChild(node)
+
+参数
+参数	类型	描述
+node	Node object	必需。您希望删除的节点对象。
+
+返回值
+类型	描述
+Node 对象。	被删除的节点。
+
+技术细节
+DOM 版本	Core Level 1 Node Object

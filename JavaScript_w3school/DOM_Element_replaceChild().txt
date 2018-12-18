@@ -1,0 +1,35 @@
+实例
+用一个新项目替换列表中的某个项目：
+document.getElementById("myList").replaceChild(newnode,oldnode);
+替换之前：
+Coffee
+Tea
+Milk
+替换之后：
+Water
+Tea
+Milk
+亲自试一试
+
+定义和用法
+replaceChild() 方法用新节点替换某个子节点。
+这个新节点可以是文档中某个已存在的节点，或者您也可创建新的节点。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 replaceChild() 方法。
+
+语法
+node.replaceChild(newnode,oldnode)
+
+参数
+参数	类型	描述
+newnode	Node object	必需。您希望插入的节点对象。
+oldnode	Node object	必需。您希望删除的节点对象。
+
+返回值
+类型	描述
+Node 对象。	被替换的节点。
+
+技术细节
+DOM 版本	Core Level 1 Node Object

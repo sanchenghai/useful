@@ -1,0 +1,30 @@
+实例
+删除 header 元素的 style 属性：
+document.getElementsByTagName("H1")[0].removeAttribute("style");
+删除属性之前：
+Hello World
+删除属性之后：
+Hello World
+亲自试一试
+
+定义和用法
+removeAttribute() 方法删除指定的属性。
+此方法与 removeAttributeNode() 方法的差异是：removeAttributeNode() 方法删除指定的 Attr 对象，而此方法删除具有指定名称的属性。结果是相同的。同时此方法不返回值，而 removeAttributeNode() 方法返回被删除的属性，以 Attr 对象的形式。
+参阅 removeAttributeNode() 方法
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 removeAttribute() 方法。
+
+语法
+element.removeAttribute(attributename)
+
+参数
+参数	类型	描述
+attributename	String	必需。您希望移除的属性的名称。
+
+返回值
+无返回值。
+
+技术细节
+DOM 版本	Core Level 1 Element Object

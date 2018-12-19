@@ -1,0 +1,29 @@
+实例
+设置 input 元素的 type 属性：
+document.getElementsByTagName("INPUT")[0].setAttribute("type","button");
+设置该属性之前：
+设置该属性之后：
+亲自试一试
+
+定义和用法
+setAttribute() 方法添加指定的属性，并为其赋指定的值。
+如果这个指定的属性已存在，则仅设置/更改值。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 setAttribute() 方法。
+注释：Internet Explorer 8 以及更早的版本不支持此方法。
+
+语法
+element.setAttribute(attributename,attributevalue)
+
+参数
+参数	类型	描述
+attributename	String	必需。您希望添加的属性的名称。
+attributevalue	String	必需。您希望添加的属性值。
+
+返回值
+无返回值。
+
+技术细节
+DOM 版本	Core Level 1 Element Object

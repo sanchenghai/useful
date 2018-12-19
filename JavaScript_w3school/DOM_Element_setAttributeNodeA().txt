@@ -1,0 +1,32 @@
+实例
+设置 header 元素的 class 属性节点：
+var atr=document.createAttribute("class");
+atr.nodeValue="democlass";
+document.getElementsByTagName("H1")[0].setAttributeNode(atr);
+设置属性节点之前：
+Hello World
+设置属性节点之后：
+Hello World
+亲自试一试
+
+定义和用法
+setAttributeNode() 方法向元素中添加指定的属性节点。
+如果这个指定的属性已存在，则此方法会替换它。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 setAttributeNode() 方法。
+
+语法
+element.setAttributeNode(attributenode)
+
+参数
+参数	类型	描述
+attributenode	Attr 对象	必需。您希望添加的属性节点。
+
+返回值
+类型	描述
+Attr 对象。	被替换的属性节点，如果有，否则返回 null。
+
+技术细节
+DOM 版本	Core Level 1 Element Object

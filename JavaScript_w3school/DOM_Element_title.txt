@@ -1,0 +1,57 @@
+定义和用法
+title 属性设置或返回元素的咨询标题。
+
+语法
+HTMLElementObject.title=title
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 title 属性。
+
+实例
+例子 1
+返回 body 元素的 title 属性：
+<html>
+ <body id="myid" title="mytitle">
+
+ <script>
+ var x=document.getElementsByTagName('body')[0];
+ document.write("Body title: " + x.title);
+ document.write("<br>");
+ document.write("替代方法：");
+ document.write(document.getElementById('myid').title);
+ </script>
+
+ </body>
+</html>
+输出：
+Body title: mytitle
+替代方法：mytitle
+亲自试一试
+例子 2
+返回图像映射中某个区域的咨询标题：
+<html>
+ <body>
+
+ <img src ="planets.gif"
+ width="145" height="126"
+ alt="Planets"
+ usemap ="#planetmap">
+
+ <map name ="planetmap">
+ <area id="venus" shape="circle"
+ coords ="124,58,8"
+ title="Venus"
+ href ="venus.htm">
+ </map>
+
+ <p>Venus' advisory title (mouse over the Venus planet):
+ <script>
+ var x=document.getElementById('venus')
+ document.write(x.title)
+ </script>
+ </p>
+
+ </body>
+</html>
+亲自试一试

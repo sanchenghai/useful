@@ -1,0 +1,21 @@
+实例
+获得元素的标签名：
+document.getElementById("demo").tagName;
+结果：
+P
+亲自试一试
+
+定义和用法
+tagName 属性返回元素的标签名。
+在 HTML 中，tagName 属性的返回值始终是大写的。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 tagName 属性。
+
+语法
+element.tagName
+
+技术细节
+返回值：	字符串值，代表元素的标签名。
+DOM 版本	Core Level 1 Element Object

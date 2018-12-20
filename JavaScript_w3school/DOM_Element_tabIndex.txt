@@ -1,0 +1,35 @@
+定义和用法
+tabIndex 属性设置或返回元素的 tab 键控制次序。
+
+语法
+HTMLElementObject.tabIndex=tabIndex
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 tabIndex 属性。
+
+实例
+改变三个链接的 tab 次序：
+<html>
+ <head>
+ <script>
+ function changeTabIndex()
+   {
+   document.getElementById('1').tabIndex="3"
+   document.getElementById('2').tabIndex="2"
+   document.getElementById('3').tabIndex="1"
+   }
+ </script>
+ </head>
+ <body>
+
+ <p><a id="1" href="http://www.w3schools.com">1</a></p>
+ <p><a id="2" href="http://www.w3schools.com">2</a></p>
+ <p><a id="3" href="http://www.w3schools.com">3</a></p>
+
+ <input type="button" onclick="changeTabIndex()"
+ value="Change TabIndex">
+
+ </body>
+</html>
+亲自试一试

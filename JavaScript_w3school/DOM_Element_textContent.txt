@@ -1,0 +1,27 @@
+实例
+获得第一个 button 元素的文本内容：
+document.getElementsByTagName("BUTTON")[0].textContent;
+结果：
+Try it yourself
+亲自试一试
+
+定义和用法
+textContent 属性设置或返回指定节点的文本内容，以及它的所有后代。
+如果您设置了 textContent 属性，会删除所有子节点，并被替换为包含指定字符串的一个单独的文本节点。
+提示：有时，此属性可用于取代 nodeValue 属性，但是请记住此属性同时会返回所有子节点的文本。
+实例
+获得列表的所有文本内容：
+document.getElementById("myList).textContent;
+亲自试一试
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 textContent 属性。
+注释：Internet Explorer 8 以及更早的版本不支持此属性。
+语法
+设置节点的文本内容：
+node.textContent=text
+返回节点的文本内容：
+node.textContent
+技术细节
+返回值：	字符串值，代表节点文本及其所有后代。
+DOM 版本	Core Level 3 Node Object

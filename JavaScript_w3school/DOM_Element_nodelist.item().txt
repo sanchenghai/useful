@@ -1,0 +1,29 @@
+实例
+返回元素的首个子节点：
+document.body.childNodes.item(0);
+亲自试一试
+
+定义和用法
+item() 方法节点列表中位于指定索引的节点。
+以下两条语法产生相同的结果：
+document.body.childNodes.item(0);
+
+document.body.childNodes[0];
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 item() 方法。
+
+语法
+nodelist.item(index)
+
+参数
+参数	类型	描述
+index	数字值。	必需。被返回节点在节点列表中的索引。
+
+返回值
+类型	描述
+Node 对象	位于指定索引的节点。
+
+技术细节
+DOM 版本	Core Level 1 Nodelist Object

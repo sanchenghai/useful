@@ -1,0 +1,21 @@
+实例
+返回 body 元素的子节点数量：
+document.body.childNodes.length;
+结果：
+8
+亲自试一试
+
+定义和用法
+length 属性返回集合中的节点数量。
+Node 对象的子节点集合是 NodeList 对象的实例。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器均支持 length 属性。
+
+语法
+nodelist.length
+
+技术细节
+返回值：	数字值，表示节点列表中的节点数量。
+DOM 版本	Core Level 1 Nodelist Object

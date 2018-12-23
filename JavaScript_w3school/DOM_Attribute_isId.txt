@@ -1,0 +1,20 @@
+实例
+查明属性是否是元素的 ID 属性：
+document.getElementById("demo").attributes[0].isId;
+结果：
+true
+亲自试一试
+
+定义和用法
+isId 属性返回 true，如果属性是 ID 类型，返回返回 false。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 isId 属性，除了 Internet Explorer 和 Opera。
+
+语法
+attribute.isId
+
+技术细节
+返回值：	Boolean，true|false
+DOM 版本	Core Level 3

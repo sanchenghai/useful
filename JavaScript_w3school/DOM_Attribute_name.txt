@@ -1,0 +1,20 @@
+实例
+返回属性的名称：
+document.getElementsByTagName("button")[0].attributes[0].name;
+结果：
+onclick
+亲自试一试
+
+定义和用法
+name 属性返回属性的名称。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 name 属性。
+
+语法
+attribute.name
+
+技术细节
+返回值：	字符串值，代表属性的名称。
+DOM 版本	Core Level 1

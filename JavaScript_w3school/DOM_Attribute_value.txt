@@ -1,0 +1,34 @@
+实例
+返回属性的值：
+document.getElementsByTagName("button")[0].attributes[0].value;
+结果：
+myFunction()
+亲自试一试
+
+实例 2：设置属性的值
+设置标题元素的 style 属性：
+var h=document.getElementsByTagName("H1")[0];
+h.getAttributeNode("style").value="color:green";
+改变样式之前：
+Hello World
+改变样式之后：
+Hello World
+亲自试一试
+
+定义和用法
+value 属性设置或返回属性的值。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 value 属性。
+
+语法
+设置属性值：
+attribute.value=value
+
+返回属性值：
+attribute.value
+
+技术细节
+返回值：	字符串值，代表属性的值。
+DOM 版本	Core Level 1

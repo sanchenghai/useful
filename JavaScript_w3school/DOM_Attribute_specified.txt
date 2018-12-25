@@ -1,0 +1,22 @@
+实例
+查明是否已规定某个属性：
+document.getElementById("demo").attributes[0].specified;
+结果：
+true
+亲自试一试
+
+定义和用法
+specified 属性返回 true，如果已规定某个属性。
+如果已创建该属性但尚未添加到元素中，也会返回 true。
+否则返回 false。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 specified 属性。
+
+语法
+attribute.specified
+
+技术细节
+返回值：	Boolean, true|false
+DOM 版本	Core Level 1

@@ -1,0 +1,32 @@
+实例
+返回 button 元素的首个属性的名称：
+document.getElementsByTagName("BUTTON")[0].attributes.item(0).nodeName;
+结果：
+onclick
+亲自试一试
+
+定义和用法
+item() 方法以 Node 对象返回 namedNodeMap 中位于指定索引的节点。
+
+语法：
+document.getElementsByTagName("BUTTON")[0].attributes.item(0);
+下面这条语法产生相同的结果：
+document.getElementsByTagName("BUTTON")[0].attributes[0];
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 item() 方法。
+
+语法
+namednodemap.item(index)
+
+参数
+参数	类型	描述
+index	Number	必须。您希望返回的 namedNodeMap 中节点的索引。
+
+返回值
+类型	描述
+Node 对象。	位于指定索引的节点。
+
+技术细节
+DOM 版本	Core Level 1

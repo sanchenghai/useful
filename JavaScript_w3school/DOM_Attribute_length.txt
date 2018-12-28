@@ -1,0 +1,22 @@
+实例
+返回 button 元素的属性数：
+document.getElementsByTagName("BUTTON")[0].attributes.length;
+结果：
+1
+亲自试一试
+
+定义和用法
+length 属性返回集合中节点的数量。
+Node 对象的属性是 NamedNodeMap 对象的实例。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 length 属性。
+注释：在 Internet Explorer 8 以及更早的版本中，属性的 length 属性将返回元素所有可能属性数量。
+
+语法
+namednodemap.length
+
+技术细节
+返回值：	数字值，代表 nodemap 中的节点数。
+DOM 版本	Core Level 1

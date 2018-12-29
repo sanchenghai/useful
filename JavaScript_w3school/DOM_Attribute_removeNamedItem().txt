@@ -1,0 +1,27 @@
+实例
+删除 input 按钮的 type 属性：
+var btn=document.getElementsByTagName("INPUT")[0];
+btn.attributes.removeNamedItem("type");
+亲自试一试
+
+定义和用法
+removeNamedItem() 方法删除 namedNodeMap 中带有指定名称的节点。
+
+浏览器支持
+IE	Firefox	Chrome	Safari	Opera
+所有主流浏览器都支持 removeNamedItem() 方法。
+注释：在 Internet Explorer 8 以及更早的版本中，当使用 removedNamedItem 方法来删除属性时，此方法会返回该属性，但不会删除该属性。
+
+语法
+namednodemap.removeNamedItem(nodename)
+
+参数
+参数	类型	描述
+nodename	String	必需。您希望删除的 namedNodeMap 中节点的名称。
+
+返回值
+类型	描述
+Node 对象	被删除的节点。
+
+技术细节
+DOM 版本	Core Level 1

@@ -1,0 +1,37 @@
+定义和用法
+onchange 事件会在域的内容改变时发生。
+
+语法
+onchange="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<input type="text">, <select>, <textarea>
+
+支持该事件的 JavaScript 对象：
+fileUpload, select, text, textarea
+
+实例 1
+在本例中，我们将在用户改变输入域内容时执行 JavaScript 代码：
+<html>
+<head>
+<script type="text/javascript">
+function upperCase(x)
+{
+var y=document.getElementById(x).value
+document.getElementById(x).value=y.toUpperCase()
+}
+</script>
+</head>
+
+<body>
+
+输入您的姓名：
+<input type="text" id="fname" onchange="upperCase(this.id)" />
+
+</body>
+</html>
+输出：
+输入您的姓名：

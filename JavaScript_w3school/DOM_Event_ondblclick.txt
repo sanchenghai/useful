@@ -1,0 +1,42 @@
+定义和用法
+ondblclick 事件会在对象被双击时发生。
+
+语法
+ondblclick="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<a>, <address>, <area>, <b>, <bdo>, <big>, <blockquote>, <body>,
+<button>, <caption>, <cite>, <code>, <dd>, <dfn>, <div>, <dl>, <dt>,
+<em>, <fieldset>, <form>, <h1> to <h6>, <hr>, <i>, <img>, <input>,
+<kbd>, <label>, <legend>, <li>, <map>, <object>, <ol>, <p>, <pre>,
+<samp>, <select>, <small>, <span>, <strong>, <sub>, <sup>, <table>,
+<tbody>, <td>, <textarea>, <tfoot>, <th>, <thead>, <tr>, <tt>, <ul>, <var>
+
+支持该事件的 JavaScript 对象：
+document, link
+
+实例 1
+在本例中，当您双击按钮时，第二个域中内容会根据第一个域的内容而改变：
+<html>
+<body>
+
+Field1: <input type="text" id="field1" value="Hello World!">
+<br />
+Field2: <input type="text" id="field2">
+<br /><br />
+双击下面的按钮，把 Field1 的内容拷贝到 Field2 中：
+<br />
+<button ondblclick="document.getElementById('field2').value=
+document.getElementById('field1').value">Copy Text</button>
+
+</body>
+</html>
+输出：
+Field1:
+Hello World!
+Field2:
+双击下面的按钮，把 Field1 的内容拷贝到 Field2 中：
+Copy Text

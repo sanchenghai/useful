@@ -1,0 +1,46 @@
+定义和用法
+onfocus 事件在对象获得焦点时发生。
+
+语法
+onfocus="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<a>, <acronym>, <address>, <area>, <b>, <bdo>, <big>, <blockquote>, <button>,
+<caption>, <cite>, <dd>, <del>, <dfn>, <div>, <dl>, <dt>, <em>, <fieldset>,
+<form>, <frame>, <frameset>, <h1> to <h6>, <hr>, <i>, <iframe>, <img>, <input>,
+<ins>, <kbd>, <label>, <legend>, <li>, <object>, <ol>, <p>, <pre>, <q>,
+<samp>, <select>, <small>, <span>, <strong>, <sub>, <sup>, <table>, <tbody>,
+<td>, <textarea>, <tfoot>, <th>, <thead>, <tr>, <tt>, <ul>, <var>
+
+支持该事件的 JavaScript 对象：
+button, checkbox, fileUpload, layer, frame, password, radio, reset, select, submit,
+text, textarea, window
+
+实例
+在本例中，当输入框获得焦点时，其背景颜色将改变：
+<html>
+<head>
+<script type="text/javascript">
+function setStyle(x)
+{
+document.getElementById(x).style.background="yellow"
+}
+</script>
+</head>
+
+<body>
+
+First name: <input type="text"
+onfocus="setStyle(this.id)" id="fname" />
+<br />
+Last name: <input type="text"
+onfocus="setStyle(this.id)" id="lname" />
+
+</body>
+</html>
+输出：
+First name:
+Last name:

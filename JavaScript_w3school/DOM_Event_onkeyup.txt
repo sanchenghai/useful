@@ -1,0 +1,42 @@
+定义和用法
+onkeyup 事件会在键盘按键被松开时发生。
+
+语法
+onkeyup="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<a>, <acronym>, <address>, <area>, <b>, <bdo>, <big>, <blockquote>, <body>,
+<button>, <caption>, <cite>, <code>, <dd>, <del>, <dfn>, <div>, <dt>, <em>,
+<fieldset>, <form>, <h1> to <h6>, <hr>, <i>, <input>, <kbd>, <label>, <legend>,
+<li>, <map>, <object>, <ol>, <p>, <pre>, <q>, <samp>, <select>, <small>,
+<span>, <strong>, <sub>, <sup>, <table>, <tbody>, <td>, <textarea>, <tfoot>,
+<th>, <thead>, <tr>, <tt>, <ul>, <var>
+
+支持该事件的 JavaScript 对象：
+document, image, link, textarea
+
+实例
+当您在例子中的输入域中键入字符时，字符会被更改为大写（逐一地）：
+<html>
+
+<head>
+<script type="text/javascript">
+function upperCase(x)
+{
+var y=document.getElementById(x).value
+document.getElementById(x).value=y.toUpperCase()
+}
+</script>
+</head>
+
+<body>
+
+输入您的姓名： <input type="text" id="fname" onkeyup="upperCase(this.id)" />
+
+</body>
+</html>
+输出：
+输入您的姓名：

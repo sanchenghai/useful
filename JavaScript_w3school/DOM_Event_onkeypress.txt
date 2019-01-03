@@ -1,0 +1,54 @@
+定义和用法
+onkeypress 事件会在键盘按键被按下并释放一个键时发生。
+
+语法
+onkeypress="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<a>, <acronym>, <address>, <area>, <b>, <bdo>, <big>, <blockquote>, <body>,
+<button>, <caption>, <cite>, <code>, <dd>, <del>, <dfn>, <div>, <dt>, <em>,
+<fieldset>, <form>, <h1> to <h6>, <hr>, <i>, <input>, <kbd>, <label>, <legend>,
+<li>, <map>, <object>, <ol>, <p>, <pre>, <q>, <samp>, <select>, <small>,
+<span>, <strong>, <sub>, <sup>, <table>, <tbody>, <td>, <textarea>, <tfoot>,
+<th>, <thead>, <tr>, <tt>, <ul>, <var>
+
+支持该事件的 JavaScript 对象：
+document, image, link, textarea
+
+提示和注释
+浏览器差异：Internet Explorer 使用 event.keyCode 取回被按下的字符，而 Netscape/Firefox/Opera 使用 event.which。
+
+实例
+在本例中，用户无法在输入框中键入数字：
+<html>
+<body>
+<script type="text/javascript">
+function noNumbers(e)
+{
+var keynum
+var keychar
+var numcheck
+
+if(window.event) // IE
+  {
+  keynum = e.keyCode
+  }
+else if(e.which) // Netscape/Firefox/Opera
+  {
+  keynum = e.which
+  }
+keychar = String.fromCharCode(keynum)
+numcheck = /\d/
+return !numcheck.test(keychar)
+}
+</script>
+
+<form>
+<input type="text" onkeypress="return noNumbers(event)" />
+</form>
+
+</html>
+输出：

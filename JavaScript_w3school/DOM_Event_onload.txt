@@ -1,0 +1,31 @@
+定义和用法
+onload 事件会在页面或图像加载完成后立即发生。
+
+语法
+onload="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<body>, <frame>, <frameset>, <iframe>, <img>, <link>, <script>
+
+支持该事件的 JavaScript 对象：
+image, layer, window
+
+实例
+在本例中，文本 "Page is loaded" 会被显示在状态栏中：
+<html>
+<head>
+<script type="text/javascript">
+function load()
+{
+window.status="Page is loaded"
+}
+</script>
+</head>
+
+<body onload="load()">
+</body>
+
+</html>

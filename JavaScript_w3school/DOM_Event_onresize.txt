@@ -1,0 +1,23 @@
+定义和用法
+onresize 事件会在窗口或框架被调整大小时发生。
+
+语法
+onresize="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<a>, <address>, <b>, <big>, <blockquote>, <body>, <button>, <cite>, <code>,
+<dd>, <dfn>, <div>, <dl>, <dt>, <em>, <fieldset>, <form>, <frame>, <h1> to <h6>,
+<hr>, <i>, <img>, <input>, <kbd>, <label>, <legend>, <li>, <object>, <ol>, <p>,
+<pre>, <samp>, <select>, <small>, <span>, <strong>, <sub>, <sup>, <table>,
+<textarea>, <tt>, <ul>, <var>
+
+支持该事件的 JavaScript 对象：
+window
+
+实例
+在本例中，当用户试图调整窗口的大小时，将显示一个对话框：
+<body onresize="alert('You have changed the size of the window')">
+</body>

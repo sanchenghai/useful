@@ -1,0 +1,54 @@
+定义和用法
+onmousedown 事件会在鼠标按键被按下时发生。
+
+语法
+onmousedown="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<a>, <address>, <area>, <b>, <bdo>, <big>, <blockquote>, <body>, <button>,
+<caption>, <cite>, <code>, <dd>, <dfn>, <div>, <dl>, <dt>, <em>, <fieldset>,
+<form>, <h1> to <h6>, <hr>, <i>, <img>, <input>, <kbd>, <label>, <legend>,
+<li>, <map>, <ol>, <p>, <pre>, <samp>, <select>, <small>, <span>, <strong>,
+<sub>, <sup>, <table>, <tbody>, <td>, <textarea>, <tfoot>, <th>, <thead>,
+<tr>, <tt>, <ul>, <var>
+
+支持该事件的 JavaScript 对象：
+button, document, link
+
+实例
+在本例中，当您点击下面的图片时会弹出一个对话框：
+<img src="/i/example_mouse2.jpg"
+onmousedown="alert('You clicked the picture!')" />
+输出：（请点击图片）
+
+实例 2
+在本例中，对话框将显示出您所点击的元素的标签名：
+<html>
+<head>
+<script type="text/javascript">
+function whichElement(e)
+{
+var targ
+if (!e) var e = window.event
+if (e.target) targ = e.target
+else if (e.srcElement) targ = e.srcElement
+if (targ.nodeType == 3) // defeat Safari bug
+targ = targ.parentNode
+var tname
+tname=targ.tagName
+alert("You clicked on a " + tname + " element.")
+}
+</script>
+</head>
+
+<body onmousedown="whichElement(event)">
+
+<h2>This is a header</h2>
+<p>This is a paragraph</p>
+<img border="0" src="ball16.gif" alt="Ball">
+
+</body>
+</html>

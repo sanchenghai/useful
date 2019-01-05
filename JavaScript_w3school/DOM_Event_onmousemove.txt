@@ -1,0 +1,29 @@
+定义和用法
+onmousemove 事件会在鼠标指针移动时发生。
+
+语法
+onmousemove="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<a>, <address>, <area>, <b>, <bdo>, <big>, <blockquote>, <body>, <button>,
+<caption>, <cite>, <code>, <dd>, <dfn>, <div>, <dl>, <dt>, <em>, <fieldset>,
+<form>, <h1> to <h6>, <hr>, <i>, <img>, <input>, <kbd>, <label>, <legend>,
+<li>, <map>, <ol>, <p>, <pre>, <samp>, <select>, <small>, <span>, <strong>,
+<sub>, <sup>, <table>, <tbody>, <td>, <textarea>, <tfoot>, <th>, <thead>,
+<tr>, <tt>, <ul>, <var>
+
+支持该事件的 JavaScript 对象：
+onmousemove is, by default, not an event of any object,
+because mouse movement happens very frequently.
+
+提示和注释
+注释：每当用户把鼠标移动一个像素，就会发生一个 mousemove 事件。这会耗费系统资源去处理所有这些 mousemove 事件。因此请审慎地使用该事件。
+
+实例
+下面的例子中，当用户把鼠标移动到图像上时，将显示一个对话框：
+<img src="/i/eg_mouse2.jpg" alt="mouse"
+onmousemove="alert('您的鼠标刚才经过了图片！')" />
+输出(请把鼠标放到图片上)：

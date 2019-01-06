@@ -1,0 +1,29 @@
+定义和用法
+onsubmit 事件会在表单中的确认按钮被点击时发生。
+
+语法
+onsubmit="SomeJavaScriptCode"
+
+参数	描述
+SomeJavaScriptCode	必需。规定该事件发生时执行的 JavaScript。
+
+支持该事件的 HTML 标签：
+<form>
+
+支持该事件的 JavaScript 对象：
+form
+
+实例
+在本例中，当用户点击提交按钮时，会显示一个对话框：
+<form name="testform" action="jsref_onsubmit.asp"
+onsubmit="alert('Hello ' + testform.fname.value +'!')">
+
+What is your name?<br />
+<input type="text" name="fname" />
+<input type="submit" value="Submit" />
+
+</form>
+输出：
+What is your name?
+
+Submit

@@ -1,0 +1,26 @@
+定义和用法
+screenX 事件属性可返回事件发生时鼠标指针相对于屏幕的水平坐标。
+
+语法
+event.screenX
+
+实例
+下面的例子可显示出事件发生时鼠标指针的坐标：
+<html>
+<head>
+<script type="text/javascript">
+function show_coords(event)
+  {
+  x=event.screenX
+  y=event.screenY
+  alert("X coords: " + x + ", Y coords: " + y)
+  }
+</script>
+</head>
+<body onmousedown="show_coords(event)">
+
+<p>Click in the document. An alert box will alert
+the x and y coordinates of the cursor.</p>
+
+</body>
+</html>

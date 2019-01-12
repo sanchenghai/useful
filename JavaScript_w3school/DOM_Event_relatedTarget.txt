@@ -1,0 +1,29 @@
+定义和用法
+relatedTarget 事件属性返回与事件的目标节点相关的节点。
+对于 mouseover 事件来说，该属性是鼠标指针移到目标节点上时所离开的那个节点。
+对于 mouseout 事件来说，该属性是离开目标时，鼠标指针进入的节点。
+对于其他类型的事件来说，这个属性没有用。
+
+语法
+event.relatedTarget
+
+实例
+下面例子可返回指针刚刚离开的元素：
+<html>
+<head>
+<script type="text/javascript">
+function getRelElement(event)
+  {
+  var txt="The cursor just exited the ";
+  txt=txt + event.relatedTarget.tagName + " element.";
+  alert(txt);
+  }
+</script>
+</head>
+<body>
+
+<p onmouseover="getRelElement(event)">
+Mouse over this paragraph.</p>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+定义和用法
+currentTarget 事件属性返回其监听器触发事件的节点，即当前处理该事件的元素、文档或窗口。
+在捕获和起泡阶段，该属性是非常有用的，因为在这两个节点，它不同于 target 属性。
+
+语法
+event.currentTarget
+
+实例
+下面的例子可获得哪个元素的监听器触发了事件：
+<html>
+<head>
+
+<script type="text/javascript">
+function getEventTrigger(event)
+  {
+  x=event.currentTarget;
+  alert("The id of the triggered element: "
+  + x.id);
+  }
+</script>
+</head>
+
+<body >
+
+<p id="p1" onmousedown="getEventTrigger(event)">
+Click on this paragraph. An alert box will
+show which element triggered the event.</p>
+
+</body>
+</html>

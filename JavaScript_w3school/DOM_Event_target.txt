@@ -1,0 +1,29 @@
+定义和用法
+target 事件属性可返回事件的目标节点（触发该事件的节点），如生成事件的元素、文档或窗口。
+
+语法
+event.target
+
+实例
+下面的例子可获得触发事件的元素：
+<html>
+<head>
+
+<script type="text/javascript">
+function getEventTrigger(event)
+  {
+  x=event.target;
+  alert("The id of the triggered element: "
+  + x.id);
+  }
+</script>
+
+</head>
+<body >
+
+<p id="p1" onmousedown="getEventTrigger(event)">
+Click on this paragraph. An alert box will
+show which element triggered the event.</p>
+
+</body>
+</html>

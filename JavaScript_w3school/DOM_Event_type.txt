@@ -1,0 +1,27 @@
+定义和用法
+type 事件属性返回发生的事件的类型，即当前 Event 对象表示的事件的名称。
+它与注册的事件句柄同名，或者是事件句柄属性删除前缀 "on" 比如 "submit"、"load" 或 "click"。
+
+语法
+event.type
+
+实例
+下面的例子可返回被触发的事件的类型：
+<html>
+<head>
+<script type="text/javascript">
+function getEventType(event)
+  {
+  alert(event.type);
+  }
+</script>
+</head>
+
+<body onmousedown="getEventType(event)">
+
+<p>Click somewhere in the document.
+An alert box will tell what event
+type you triggered.</p>
+
+</body>
+</html>

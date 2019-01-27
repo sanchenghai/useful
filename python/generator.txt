@@ -1,0 +1,18 @@
+要创建一个generator，有很多种方法。第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator：
+ g = (x * x for x in range(10))
+ generator的另一种方法:如果一个函数定义中包含yield关键字，那么这个函数就不再是一个普通函数，而是一个generator：
+
+ generator是非常强大的工具，在Python中，可以简单地把列表生成式改成generator，也可以通过函数实现复杂逻辑的generator。
+
+ 要理解generator的工作原理，它是在for循环的过程中不断计算出下一个元素，并在适当的条件结束for循环。对于函数改成的generator来说，遇到return语句或者执行到函数体最后一行语句，就是结束generator的指令，for循环随之结束。
+
+ 请注意区分普通函数和generator函数，普通函数调用直接返回结果：
+
+ >>> r = abs(6)
+ >>> r
+ 6
+ generator函数的“调用”实际返回一个generator对象：
+
+ >>> g = fib(6)
+ >>> g
+ <generator object fib at 0x1022ef948>

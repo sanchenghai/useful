@@ -1,0 +1,13 @@
+注意到datetime是模块，datetime模块还包含一个datetime类，通过from datetime import datetime导入的才是datetime这个类。
+
+如果仅导入import datetime，则必须引用全名datetime.datetime。
+
+datetime.now()返回当前日期和时间，其类型是datetime
+
+timestamp的值与时区毫无关系，因为timestamp一旦确定，其UTC时间就确定了，转换到任意时区的时间也是完全确定的，这就是为什么计算机存储的当前时间是以timestamp表示的，因为全球各地的计算机在任意时刻的timestamp都是完全相同的（假定时间已校准）。
+
+小结
+
+datetime表示的时间需要时区信息才能确定一个特定的时间，否则只能视为本地时间。
+
+如果要存储datetime，最佳方法是将其转换为timestamp再存储，因为timestamp的值与时区完全无关。

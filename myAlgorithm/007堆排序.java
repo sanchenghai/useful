@@ -43,8 +43,16 @@ private static void buildHeap(int[] array){
   }
 }
 
-private static void heapSort(int[] array){
+private static int[] heapSort(int[] array){
   if(array == null || array.length <= 1){
-    return;
+    return array;
   }
+  buildHeap(array);
+  for(int i = array.length - 1; i > 0; i--){
+    int temp = array[i];
+    array[i] = array[0];
+    array[0] = temp;
+    downAdjust(array, 0, i);
+  }
+  return array;
 }
